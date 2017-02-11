@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+/*=======================================
+节样式
+=========================================
+*/
+
+.rt-section {
+    padding: 6px 0 6px 0;
+    font-size: 12px;
+    color: $rt-gray-dark;
+}
+
+.rt-section i {
+    float: left;
+    width: 2.5px;
+    height: 21px;
+    background-color: $rt-primary;
+    margin-right: $rt-space-small;
+}

@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+/*=======================================
+列表样式
+=========================================
+*/
+
+.rt-list {
+    display: block;
+    border-top: 1px solid $rt-border-color;
+    border-bottom: 1px solid $rt-border-color;
+    background-color: white;
+}
+
+.rt-item {
+    display: block;
+    padding: 13px 15px 11px 15px;
+}
+
+.rt-item.has-divider {
+    border-bottom: 1px solid $rt-divider-color;
+}

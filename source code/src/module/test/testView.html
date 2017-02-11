@@ -1,0 +1,146 @@
+<ion-view title="Wechat Audio" class="stable-bg">
+    <style>
+       .activated .wx-camera{
+          color: red;
+       }
+    </style>
+    <ion-nav-buttons side="right">
+      <button class="button button-clear button-icon icon-right ion-ios-eye-outline" ng-click="check()"></button>
+    </ion-nav-buttons>
+    <ion-content>
+       <!-- <div>{{audio.serverId}}</div>
+       <div>{{audio.timeSpan}}</div>
+       <button class="button" ng-click="showLoading()">Loading</button>
+       <rt-input-animation rt-model="vm.test1" rt-effect="rt-effect-16" rt-label="First"></rt-input-animation>
+       <rt-input-animation rt-model="vm.test2" rt-effect="rt-effect-17" rt-label="Second"></rt-input-animation>
+       <rt-input-animation rt-model="vm.test3" rt-effect="rt-effect-18" rt-label="Third"></rt-input-animation>
+       <rt-input-animation rt-model="vm.test4" rt-effect="rt-effect-19" rt-label="Fourth"></rt-input-animation>
+       <rt-input-animation rt-model="vm.test5" rt-effect="rt-effect-20" rt-label="Fifth"></rt-input-animation>
+       <rt-input-animation rt-model="vm.test6" rt-effect="rt-effect-21" rt-label="Sixth"></rt-input-animation>
+       <rt-input-animation rt-model="vm.test7" rt-effect="rt-effect-22" rt-label="Seventh"></rt-input-animation>
+       <rt-input-animation rt-model="vm.test8" rt-effect="rt-effect-23" rt-label="Eighth"></rt-input-animation>
+       <rt-input-animation rt-model="vm.test9" rt-effect="rt-effect-24" rt-label="Ninth"></rt-input-animation>
+       <img ng-click="record()" src="component/img/audio.png" width="64px" style="margin-left:42%;margin-top:50%;" /> -->
+       <!-- <div style="background-color: white;">
+         <div style="padding-left: 10px;padding-bottom: 5px;">单号：1234567890</div>
+         <div style="margin-left: 10px;display: inline-block;">
+           <img src="component/img/now-in.png" style="float: left;width: 20px;">
+           <div style="width: 1px;border-left: 1px dashed red;height: 46px;float: left;position: relative;right: 11px;top: 20px;z-index: 1;"></div>
+           <div style="float: right;width: 90%;">
+             <div>已签收（门卫代签），感谢使用顺丰，期待再次为你服务</div>
+  	         <div>2016-12-21 10:27:10</div>
+           </div>
+         </div>
+         <div style="margin-left: 10px;display: inline-block;">
+           <img src="component/img/now-in.png" style="float: left;width: 20px;">
+           <div style="width: 1px;border-left: 1px dashed red;height: 46px;float: left;position: relative;right: 11px;top: 20px;z-index: 1;"></div>
+           <div style="float: right;width: 90%;">
+             <div>正在派送途中，请您准备签收（派件人：杨道强，电话：15195638919）</div>
+  	         <div>2016-12-21 10:27:10</div>
+           </div>
+         </div>
+       </div>
+       <hr style="padding-bottom: 10px;" /> -->
+       <!-- <input type="file" name="test" id="testmp4" onchange="preImg(this.id, this.name);" />
+       <video id="test" src="movie.ogg" controls="controls" autoplay="autoplay" width="320" height="240"></video> -->
+       <!-- <rt-process-steps rt-model="data"></rt-process-steps> -->
+
+       <!-- <rt-section rt-title="Number Badge"></rt-section>
+       <ion-item class="item item-icon-right" style="height: 40px;line-height: 40px;padding: 0px 0px 0px 16px;">
+        <i class="icon ion-ios-arrow-right"></i>
+        <div style="float: right;margin: 10px 44px 10px 0px;background-color: red;border-radius: 20px;height: 20px;line-height: 22px;color: white;width: 20px;text-align: center;">3</div>
+        Badge
+       </ion-item> -->
+
+      <rt-section rt-title="Number Badge"></rt-section>
+      <rt-badge-number rt-badge-num="0" rt-badge-title="Badge Number is Zero"></rt-badge-number>
+      <rt-badge-number rt-badge-num="3" rt-badge-title="Badge"></rt-badge-number>
+      <rt-badge-number rt-badge-num="23" rt-badge-title="Badge"></rt-badge-number>
+      <rt-badge-number rt-badge-num="233" rt-badge-title="Badge"></rt-badge-number>
+      <rt-badge-number rt-badge-num="2333" rt-badge-title="Badge"></rt-badge-number>
+
+      <rt-section rt-title="微信朋友圈Cell"></rt-section>
+      <rt-badge-with-image rt-badge-img="component/img/four.png" rt-badge-title="Badge With Image"></rt-badge-with-image>
+      <rt-badge-with-image rt-badge-img="" rt-badge-title="Badge With Image Is Null"></rt-badge-with-image>
+
+      <rt-section rt-title="Spot Badge"></rt-section>
+      <rt-badge-with-spot rt-badge-spot="spot" rt-badge-title="Badge With Spot"></rt-badge-with-spot>
+      <rt-badge-with-spot rt-badge-spot="" rt-badge-title="Badge With No Spot"></rt-badge-with-spot>
+
+      <rt-section rt-title="Image Number Badge"></rt-section>
+      <rt-badge-with-image-number rt-badge-img-num="3" rt-badge-img="component/img/1.png" rt-badge-title="Image Badge With Num" rt-badge-content="Back off, man. I'm a scientist."></rt-badge-with-image-number>
+      <rt-badge-with-image-number rt-badge-img-num="23" rt-badge-img="component/img/2.png" rt-badge-title="Image Badge With Num" rt-badge-content="Back off, man. I'm a scientist."></rt-badge-with-image-number>
+      <rt-badge-with-image-number rt-badge-img-num="233" rt-badge-img="component/img/3.png" rt-badge-title="Image Badge With Num" rt-badge-content="Back off, man. I'm a scientist."></rt-badge-with-image-number>
+      <rt-badge-with-image-number rt-badge-img-num="2333" rt-badge-img="component/img/four.png" rt-badge-title="Image Badge With Num" rt-badge-content="Back off, man. I'm a scientist."></rt-badge-with-image-number>
+      <rt-badge-with-image-number rt-badge-img-num="0" rt-badge-img="component/img/5.png" rt-badge-title="Image Badge With Num Is Zero" rt-badge-content="We're gonna go full stream"></rt-badge-with-image-number>
+
+      <rt-section rt-title="Image Spot Badge"></rt-section>
+      <rt-badge-with-image-spot rt-badge-img-spot="imageSpot" rt-badge-img="component/img/6.png" rt-badge-title="Image Badge With Spot" rt-badge-content="Back off, man. I'm a scientist."></rt-badge-with-image-spot>
+      <rt-badge-with-image-spot rt-badge-img-spot="" rt-badge-img="component/img/7.png" rt-badge-title="Image Badge With No Spot" rt-badge-content="We're gonna go full stream"></rt-badge-with-image-spot>
+
+      <rt-section rt-title="Badge"></rt-section>
+      <ion-item class="item item-icon-right">
+         <i class="icon ion-ios-arrow-right" style="font-size: 20px;"></i>
+         <rt-badge rt-badge-num="4" style="float: right;position: absolute;right: 40px;top: 18px;"></rt-badge>
+         Badge
+      </ion-item>
+      <ion-item class="item item-icon-right">
+         <i class="icon ion-ios-arrow-right" style="font-size: 20px;"></i>
+         <rt-badge style="float: right;position: absolute;right: 40px;top: 23px;"></rt-badge>
+         Badge
+      </ion-item>
+      <ion-item class="item item-icon-right">
+         <i class="icon ion-ios-arrow-right" style="font-size: 20px;"></i>
+         <rt-badge rt-badge-num="45" style="float: right;position: absolute;right: 40px;top: 18px;"></rt-badge>
+         Badge
+      </ion-item>
+      <ion-item class="item item-icon-right">
+         <i class="icon ion-ios-arrow-right" style="font-size: 20px;"></i>
+         <rt-badge rt-badge-num="467" style="float: right;position: absolute;right: 40px;top: 18px;"></rt-badge>
+         Badge
+      </ion-item>
+      <ion-item class="item item-icon-right">
+         <i class="icon ion-ios-arrow-right" style="font-size: 20px;"></i>
+         <rt-badge is-spot-style="true" style="float: right;position: absolute;right: 42px;top: 23px;"></rt-badge>
+         Badge
+      </ion-item>
+
+      <rt-section rt-title="微信拍照"></rt-section>
+      <ion-item>
+         <div class="rt-choose-image" ng-click="choosePhotoes()">
+            <i style="font-size: 80px;" class="ion-ios-camera-outline wx-camera"></i>
+            <!-- <img style="width: 60px;" src="component/img//audio_record.png" /> -->
+         </div>
+         <div class="rt-thumbnail" ng-repeat="pic in wx.ScenePhotoes">
+            <img class="thumbnail" ng-src="{{pic}}" ng-click="previewImage(pic, $index)" />
+         </div>
+      </ion-item>
+      <rt-section ng-if="isVisible" rt-title="照片的ServerId"></rt-section>
+      <ion-item ng-if="isVisible">
+         <div ng-repeat="sid in wx.ServerId">{{sid}}</div>
+      </ion-item>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </ion-content>
+</ion-view>

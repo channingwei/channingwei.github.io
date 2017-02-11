@@ -1,0 +1,176 @@
+@charset "UTF-8";
+/*============================================
+按钮样式
+============================================*/
+
+.rt-button {
+  padding: 10px 15px;
+  border: 0px solid $rt-border-color;
+  background-color: $rt-primary;
+  color: #ffffff;
+  font-size: 14px;
+  border-radius: 3px;
+}
+
+.rt-button.rt-button-assertive {
+  background-color: $rt-assertive;
+}
+
+.rt-button.rt-button-positive{
+  background-color: $rt-positive;
+}
+
+.rt-button.rt-button-calm{
+  background-color: $rt-calm;
+}
+
+.rt-button.rt-button-negative{
+  background-color: $rt-negative;
+}
+
+.rt-button.rt-button-balanced{
+  background-color: $rt-balanced;
+}
+
+.rt-button.rt-button-royal{
+  background-color: $rt-royal;
+}
+
+.rt-button.rt-button-energized{
+  background-color: $rt-energized;
+}
+
+.rt-button.rt-button-full {
+  display:block;;
+  width: 100%;
+}
+
+.rt-button.rt-button-outline {
+  -webkit-transition: opacity .1s;
+  transition: opacity .1s;
+  background: 0 0;
+  box-shadow: none;
+
+  border-width: 1px;
+  border-style: solid;
+  border-color:$rt-primary;
+
+  color: $rt-primary;
+}
+
+.rt-button.rt-button-outline.rt-button-assertive {
+  border-color:  $rt-assertive;
+  color: $rt-assertive;
+}
+
+.rt-button.rt-button-outline.rt-button-positive{
+  border-color:  $rt-positive;
+  color: $rt-positive;
+}
+
+.rt-button.rt-button-outline.rt-button-calm{
+  border-color:  $rt-calm;
+  color: $rt-calm;
+}
+
+.rt-button.rt-button-outline.rt-button-negative{
+  border-color:  $rt-negative;
+  color: $rt-negative;
+}
+
+.rt-button.rt-button-outline.rt-button-balanced{
+  border-color:  $rt-balanced;
+  color: $rt-balanced;
+}
+
+.rt-button.rt-button-outline.rt-button-royal{
+  border-color:  $rt-royal;
+  color: $rt-royal;
+}
+
+.rt-button.rt-button-outline.rt-button-energized{
+  border-color:$rt-energized ;
+  color: $rt-energized;
+}
+
+.rt-button.rt-button-outline:active {
+  background-color: $rt-primary !important;
+  color: #ffffff !important;
+}
+
+.rt-button.rt-button-outline.rt-button-assertive:active {
+  background-color: $rt-assertive !important;
+  color: #ffffff !important;
+}
+
+.rt-button.rt-button-outline.rt-button-positive:active {
+  background-color: $rt-positive !important;
+  color: #ffffff !important;
+}
+
+.rt-button.rt-button-outline.rt-button-calm:active {
+  background-color: $rt-calm !important;
+  color: #ffffff !important;
+}
+
+.rt-button.rt-button-outline.rt-button-negative:active {
+  background-color: $rt-negative !important;
+  color: #ffffff !important;
+}
+
+.rt-button.rt-button-outline.rt-button-balanced:active {
+  background-color: $rt-balanced !important;
+  color: #ffffff !important;
+}
+
+.rt-button.rt-button-outline.rt-button-royal:active {
+  background-color: $rt-royal !important;
+  color: #ffffff !important;
+}
+
+.rt-button.rt-button-outline.rt-button-energized:active {
+  background-color: $rt-energized !important;
+  color: #ffffff !important;
+}
+
+.rt-button.rt-button-outline.rt-button-full{
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  border-left: 0 !important;
+  border-right: 0 !important;
+  border-radius: 0 !important;
+  border-color: $rt-border-color !important;
+}
+
+.rt-button.rt-button-outline.rt-button-full:active{
+  background-color: $rt-gray-light !important;
+  color: $rt-primary !important;
+}
+
+.rt-button.rt-button-outline.rt-button-full.rt-button-assertive:active {
+  color: $rt-assertive !important;
+}
+
+.rt-button.rt-button-outline.rt-button-full.rt-button-positive:active {
+  color: $rt-positive !important;
+}
+
+.rt-button.rt-button-outline.rt-button-full.rt-button-calm:active {
+  color: $rt-calm !important;
+}
+
+.rt-button.rt-button-outline.rt-button-full.rt-button-negative:active {
+  color: $rt-negative !important;
+}
+
+.rt-button.rt-button-outline.rt-button-full.rt-button-balanced:active {
+  color: $rt-balanced !important;
+}
+
+.rt-button.rt-button-outline.rt-button-full.rt-button-royal:active {
+  color: $rt-royal !important;
+}
+
+.rt-button.rt-button-outline.rt-button-full.rt-button-energized:active {
+  color: $rt-energized !important;
+}

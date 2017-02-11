@@ -1,0 +1,20 @@
+.rt-empty-view {
+    text-align: center;
+    margin-top: 20%;
+}
+
+@media screen and (max-width: 1200px) {
+    .rt-empty-view img {
+        height: 125px;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .rt-empty-view img {
+        height: 200px;
+    }
+}
+
+.rt-empty-view p {
+    color: $rt-gray;
+}

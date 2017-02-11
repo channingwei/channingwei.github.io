@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+/*============================================
+卡片式的Item项目
+============================================*/
+
+.rt-card {
+    margin-top: 10px;
+}
+
+.rt-card p.rt-card-item {
+    border-bottom: 1px solid #f0f0f0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.rt-card p.rt-card-item:first-child {
+    border-top: 0;
+}
+
+.rt-card p.rt-card-item:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+}

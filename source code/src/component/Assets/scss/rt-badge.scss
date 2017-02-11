@@ -1,0 +1,89 @@
+@charset "UTF-8";
+/*============================================
+Badge的样式表
+============================================*/
+// rt-badge
+.rt-badge{
+   font-size: 90%;
+   background-color: red;
+   border-radius: 20px;
+   height: 20px;
+   line-height: 20px;
+   color: white;
+   text-align: center;
+   display: inline-block;
+}
+.rt-badge-spot-style-base{
+   height: 8px;
+   width: 8px;
+   background-color: red;
+   border-radius: 50%;
+}
+// badgeNumber
+.rt-badge-number{
+   height: 40px;
+   line-height: 40px;
+   padding: 0px 0px 0px 16px;
+}
+.rt-badge-number-style{
+   font-size: 90%;
+   float: right;
+   margin: 8px 44px 10px 0px;
+   background-color: red;
+   border-radius: 20px;
+   height: 20px;
+   line-height: 20px;
+   color: white;
+   text-align: center;
+}
+// badgeImage
+.rt-badge-image{
+   height: 40px;
+   line-height: 40px;
+   padding: 0px 0px 0px 16px;
+}
+.rt-badge-image-style{
+   float: right;
+   margin: 4px 44px 4px 0px;
+   height: 30px;
+   line-height: 30px;
+   width: 30px;
+   text-align: center;
+}
+// badgeSpot
+.rt-badge-spot{
+   height: 40px;
+   line-height: 40px;
+   padding: 0px 0px 0px 16px;
+}
+.rt-badge-spot-style{
+   float: right;
+   margin: 15px 44px 15px 0px;
+   height: 8px;
+   width: 8px;
+   background-color: red;
+   border-radius: 50%;
+}
+// badgeImageNumber
+.rt-badge-image-number-style{
+   font-size: 90%;
+   height: 16px;
+   line-height: 16px;
+   text-align: center;
+   background-color: red;
+   border-radius: 16px;
+   position: absolute;
+   top: 8px;
+   left: 50px;
+   color: white;
+}
+// badgeImageSpot
+.rt-badge-image-spot-style{
+   height: 8px;
+   width: 8px;
+   background-color: red;
+   border-radius: 8px;
+   position: absolute;
+   top: 12px;
+   left: 52px;
+}

@@ -1,0 +1,43 @@
+@charset "UTF-8";
+/*============================================
+物流进度条页面样式
+============================================*/
+
+.rt-process-steps-view{
+  background-color: white;
+}
+
+.rt-process-steps-view .rt-content-last{
+  margin-left: 15px;
+  display: inline-block;
+}
+
+.rt-process-steps-view .rt-content-not-last{
+  margin-left: 15px;
+  display: inline-block;
+  border-left: 1px dashed #888;
+}
+
+.rt-process-steps-view .rt-img{
+  float: left;
+  width: 20px;
+  position: relative;
+  right: 10px;
+  background-color: white;
+}
+
+.rt-process-steps-view .rt-content-first{
+  font-size: 14px;
+  color: #555;
+}
+
+.rt-process-steps-view .rt-content-not-first{
+  font-size: 14px;
+  color: #888;
+}
+
+.rt-process-steps-view .rt-content-date{
+  font-size: 9px;
+  color: #888;
+  padding-top: 10px;
+}

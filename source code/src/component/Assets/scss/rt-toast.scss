@@ -1,0 +1,21 @@
+.weui_icon_toast_error {
+    margin: 22px 0 0 !important;
+    display: block !important;
+}
+
+.weui_icon_toast_error:before {
+    content: '\EA0D' !important;
+    color: #FFFFFF !important;
+    font-size: 55px !important;
+}
+
+.weui_icon_toast_information {
+    margin: 22px 0 0 !important;
+    display: block !important;
+}
+
+.weui_icon_toast_information:before {
+    content: '\EA05' !important;
+    color: #FFFFFF !important;
+    font-size: 55px !important;
+}
