@@ -1,10 +1,10 @@
 /*global angular:false */
 /*global _:false */
-/*global xrmApp:false */
+/*global ckApp:false */
 /*global wx:false */
 (function() {
     'use strict';
-    angular.module('xrmApp')
+    angular.module('ckApp')
         .service('rtApp', ['$http', 'rtUtils', 'rtRestClient', 'rtWechat', '$ionicHistory', function($http, rtUtils, rtRestClient, rtWechat, $ionicHistory) {
             /**
              * 返回

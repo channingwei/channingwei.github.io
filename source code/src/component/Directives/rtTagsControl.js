@@ -1,11 +1,6 @@
-/********************************************************
- Copyright @ 苏州瑞泰信息技术有限公司 All rights reserved.
- 创建人   : Channing Guo
- 创建时间 : 2016-05-12
- 说明     : Tags组件
- *********************************************************/
 /*global angular*/
-angular.module('xrmApp')
+
+angular.module('ckApp')
     .directive('rtTags', function() {
         "use strict";
         return {

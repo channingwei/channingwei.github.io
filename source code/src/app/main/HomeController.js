@@ -1,11 +1,11 @@
 /*global angular:false */
 /*global _:false */
-/*global xrmApp:false */
+/*global ckApp:false */
 /*global UITaskView:false */
 
 (function() {
     'use strict';
-    xrmApp.controller("HomeController", ['$rootScope','$scope', '$state', 'rt','$q',HomeController]);
+    ckApp.controller("HomeController", ['$rootScope','$scope', '$state', 'rt','$q',HomeController]);
     function HomeController($rootScope,$scope, $state, rt, $q) {
         $scope.vm = {};
         $scope.vm.data={};//仪表板数据

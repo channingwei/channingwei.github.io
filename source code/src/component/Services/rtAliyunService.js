@@ -1,10 +1,10 @@
 /*global angular:false */
 /*global _:false */
-/*global xrmApp:false */
+/*global ckApp:false */
 /*global wx:false */
 (function() {
     'use strict';
-    angular.module('xrmApp')
+    angular.module('ckApp')
         .service('rtAliyun', ['rtUtils', 'rtRestClient', function(rtUtils, rtRestClient) {
             var config;
 

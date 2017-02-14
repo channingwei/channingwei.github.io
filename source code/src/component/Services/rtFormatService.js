@@ -1,14 +1,8 @@
-/********************************************************
- Copyright @ 苏州瑞泰信息技术有限公司 All rights reserved.
- 创建人   : joe Song
- 创建时间 : 2016-03-10
- 说明     : 格式化数据的Filter
- *********************************************************/
 /*global angular*/
 
 (function() {
     'use strict';
-    angular.module('xrmApp')
+    angular.module('ckApp')
         .filter('friendlyFormatDateTime', function() {
 
             function formatDateTime(d, format) {

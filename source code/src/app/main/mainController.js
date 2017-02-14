@@ -1,8 +1,8 @@
 /*global UIMenu:false */
-/*global xrmApp:false */
+/*global ckApp:false */
 (function () {
     'use strict';
-    xrmApp.controller("MainController", ['$scope', '$state', '$stateParams', 'rt', MainController]);
+    ckApp.controller("MainController", ['$scope', '$state', '$stateParams', 'rt', MainController]);
 
     function MainController($scope, $state, $stateParams, rt) {
         _init();

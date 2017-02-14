@@ -1,11 +1,6 @@
-/********************************************************
- Copyright @ 苏州瑞泰信息技术有限公司 All rights reserved.
- 创建人   : Channing Guo
- 创建时间 : 2016-05-03
- 说明     : 搜索栏组件
- *********************************************************/
 /*global angular*/
-angular.module('xrmApp')
+
+angular.module('ckApp')
     .directive('rtSearchBar', ['$timeout', 'rt', function ($timeout, rt) {
         'use strict';
         return {

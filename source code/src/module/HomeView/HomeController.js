@@ -1,20 +1,20 @@
 /*global angular:false */
 /*global _:false */
-/*global xrmApp:false */
+/*global ckApp:false */
 /*global UITaskView:false */
 
 
 (function () {
-    'use strict';
+   'use strict';
 
-    xrmApp.controller("TestController", ['$scope', '$filter', '$state', '$compile', 'rt', '$ionicScrollDelegate', HomeController]);
-    function HomeController($scope, $filter, $state, $compile, rt, $ionicScrollDelegate) {
+   ckApp.controller("HomeController", ['$scope', '$filter', '$state', '$compile', 'rt', '$ionicScrollDelegate', HomeController]);
+   function HomeController($scope, $filter, $state, $compile, rt, $ionicScrollDelegate) {
 
-        function init() {
+      function init() {
+         $scope.screenHeight = rt.getScreenHeight();
+      }
 
-        }
-
-        init();
-    }
+      init();
+   }
 
 })();

@@ -1,8 +1,8 @@
 /*global UIMenu:false */
-/*global xrmApp:false */
+/*global ckApp:false */
 (function() {
     'use strict';
-    xrmApp.controller("blankController", [blankController]);
+    ckApp.controller("blankController", [blankController]);
 
     function blankController() {}
 })();

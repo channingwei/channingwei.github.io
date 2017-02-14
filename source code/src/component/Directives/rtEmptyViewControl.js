@@ -1,12 +1,6 @@
-/********************************************************
- Copyright @ 苏州瑞泰信息技术有限公司 All rights reserved.
- 创建人   : joe Song
- 创建时间 : 2016-03-10
- 说明     :  当没有数据时显示的空白图片
- *********************************************************/
 /*global angular*/
 
-angular.module('xrmApp')
+angular.module('ckApp')
     .directive('rtEmptyView', function() {
         "use strict";
         return {

@@ -1,14 +1,8 @@
-/********************************************************
- Copyright @ 苏州瑞泰信息技术有限公司 All rights reserved.
- 创建人   : East Lv
- 创建时间 : 2016-03-10
- 说明     : 高级查找的过滤视图
- *********************************************************/
 /*global angular:false */
 
 (function(window, document, undefined) {
     'use strict';
-    angular.module('xrmApp')
+    angular.module('ckApp')
         .directive('rtFilterContainer', ['rt', function(rt) {
             return {
                 restrict: 'E',

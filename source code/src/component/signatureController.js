@@ -1,12 +1,6 @@
-/********************************************************
- Copyright @ 苏州瑞泰信息技术有限公司 All rights reserved.
- 创建人   : Edgard Dong
- 创建时间 : 2016/7/18
- 说明     : 签名
- *********************************************************/
 (function() {
     'use strict';
-    xrmApp.controller("signatureController", ['$scope', '$stateParams', 'rt', '$timeout', '$rootScope', signatureController]);
+    ckApp.controller("signatureController", ['$scope', '$stateParams', 'rt', '$timeout', '$rootScope', signatureController]);
 
     function signatureController($scope, $stateParams, rt, $timeout, $rootScope) {
 

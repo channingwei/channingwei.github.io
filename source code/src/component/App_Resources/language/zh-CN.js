@@ -1,11 +1,8 @@
-﻿/**
- * Created by lvdongbo on 2016/5/23.
- */
-/*global xrmApp*/
+/*global ckApp*/
 
 (function () {
     "use strict";
-    xrmApp.config(['$translateProvider', function ($translateProvider) {
+    ckApp.config(['$translateProvider', function ($translateProvider) {
         $translateProvider.translations('zh-CN', {
             'component_OK': '确定',
             'component_Cancel': '取消',
@@ -13,7 +10,7 @@
             'component_Delete': '删除',
             'component_Reset': "重置",
             'component_Confirm': '确认',
-            
+
             'component_Loading': '正在加载...',
 
             'component_Image_Preview':'照片预览',

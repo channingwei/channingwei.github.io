@@ -1,11 +1,5 @@
-/********************************************************
-Copyright @ 苏州瑞泰信息技术有限公司 All rights reserved. 
- 创建人   : joe Song
- 创建时间 : 2016-03-10
- 说明     : 自动设置焦点的Directive
-*********************************************************/
-
-angular.module('xrmApp')
+/*global angular:false */
+angular.module('ckApp')
     .directive('focusOn', function() {
         return function(scope, element, attr) {
             scope.$on('focusOn', function(e, name) {

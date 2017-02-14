@@ -1,15 +1,9 @@
-﻿/********************************************************
- Copyright @ 苏州瑞泰信息技术有限公司 All rights reserved.
- 创建人   : east lv
- 创建时间 : 2016-05-18
- 说明     : 缩略图
- *********************************************************/
-/*global angular:false */
+﻿/*global angular:false */
 
 (function(window, document, undefined) {
     'use strict';
 
-    angular.module('xrmApp')
+    angular.module('ckApp')
         .directive('rtThumbnails', ['rt', function(rt) {
             return {
                 restrict: 'E',

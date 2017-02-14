@@ -1,11 +1,6 @@
-/********************************************************
- Copyright @ 苏州瑞泰信息技术有限公司 All rights reserved.
- 创建人   : Channing Kuo
- 创建时间 : 2016-12-21
- 说明     : 物流进度条
- *********************************************************/
 /*global angular*/
-angular.module('xrmApp')
+
+angular.module('ckApp')
     .directive('rtProcessSteps', ['rt', function(rt) {
         'use strict';
         return {

@@ -1,10 +1,6 @@
-/**
- * Created by Edgar dong on 2016/6/7.
- */
-
 (function() {
     'use strict';
-    angular.module('xrmApp')
+    angular.module('ckApp')
         .service('rtMd5', [function() {
             /*
              * A JavaScript implementation of the RSA Data Security, Inc. MD5 Message

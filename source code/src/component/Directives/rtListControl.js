@@ -1,12 +1,6 @@
-/********************************************************
- Copyright @ 苏州瑞泰信息技术有限公司 All rights reserved.
- 创建人   :
- 创建时间 : 2016-03-10
- 说明     : 列表
- *********************************************************/
 /*global angular*/
 
-angular.module('xrmApp')
+angular.module('ckApp')
     /*-------   列表   -------*/
     .directive('rtList', function($timeout) {
         'use strict';

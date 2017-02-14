@@ -1,11 +1,8 @@
-/**
- * Created by lvdongbo on 2016/5/23.
- */
-/*global xrmApp*/
+/*global ckApp*/
 
 (function () {
     "use strict";
-    xrmApp.config(['$translateProvider', function ($translateProvider) {
+    ckApp.config(['$translateProvider', function ($translateProvider) {
         $translateProvider.translations('en-US', {
             'component_OK': 'OK',
             'component_Cancel': 'Cancel',
@@ -13,7 +10,7 @@
             'component_Delete':'Delete',
             'component_Reset':"Reset",
             'component_Confirm':'Confirm',
-            
+
             'component_Loading': 'Loading...',
 
             'component_Image_Preview':'Preview',
@@ -26,14 +23,12 @@
         });
     }]);
 })();
-/**
- * Created by lvdongbo on 2016/5/23.
- */
-/*global xrmApp*/
+
+/*global ckApp*/
 
 (function () {
     "use strict";
-    xrmApp.config(['$translateProvider', function ($translateProvider) {
+    ckApp.config(['$translateProvider', function ($translateProvider) {
         $translateProvider.translations('ja-JP', {
             'component_OK': 'OK',
             'component_Cancel': 'キャンセル',
@@ -41,7 +36,7 @@
             'component_Delete':'削除',
             'component_Reset':"リセット",
             'component_Confirm':'確認',
-            
+
             'component_Loading': 'ローディング',
 
             'component_Image_Preview':'写真プレビュー',
@@ -54,14 +49,12 @@
         });
     }]);
 })();
-/**
- * Created by lvdongbo on 2016/5/23.
- */
-/*global xrmApp*/
+
+/*global ckApp*/
 
 (function () {
     "use strict";
-    xrmApp.config(['$translateProvider', function ($translateProvider) {
+    ckApp.config(['$translateProvider', function ($translateProvider) {
         $translateProvider.translations('zh-CN', {
             'component_OK': '确定',
             'component_Cancel': '取消',
@@ -69,7 +62,7 @@
             'component_Delete': '删除',
             'component_Reset': "重置",
             'component_Confirm': '确认',
-            
+
             'component_Loading': '正在加载...',
 
             'component_Image_Preview':'照片预览',

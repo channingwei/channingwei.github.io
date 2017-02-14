@@ -1,10 +1,10 @@
 /*global angular:false */
 /*global _:false */
-/*global xrmApp:false */
+/*global ckApp:false */
 /*global wx:false */
 (function() {
     'use strict';
-    angular.module('xrmApp')
+    angular.module('ckApp')
         .service('rtAliyun', ['rtUtils', 'rtRestClient', function(rtUtils, rtRestClient) {
             var config;
 
@@ -40,11 +40,11 @@
 
 /*global angular:false */
 /*global _:false */
-/*global xrmApp:false */
+/*global ckApp:false */
 /*global wx:false */
 (function() {
     'use strict';
-    angular.module('xrmApp')
+    angular.module('ckApp')
         .service('rtApp', ['$http', 'rtUtils', 'rtRestClient', 'rtWechat', '$ionicHistory', function($http, rtUtils, rtRestClient, rtWechat, $ionicHistory) {
             /**
              * 返回
@@ -107,16 +107,10 @@
         }]);
 })();
 
-/********************************************************
- Copyright @ 苏州瑞泰信息技术有限公司 All rights reserved.
- 创建人   : East Lv
- 创建时间 : 2016-06-27
- 说明     : 自定义的公用服务定义
- *********************************************************/
 (function() {
     'use strict';
 
-    angular.module('xrmApp')
+    angular.module('ckApp')
         .service('rtBaseService', ['rt', rtBaseService]);
 
     function rtBaseService(rt) {
@@ -126,7 +120,7 @@
 
 (function() {
     'use strict';
-    angular.module('xrmApp')
+    angular.module('ckApp')
         .service('rtCalandar', [function() {
             this.getCalandar = function(year, month) {
                 var calendar = [];
@@ -219,17 +213,11 @@
         }])
 })();
 
-/********************************************************
- Copyright @ 苏州瑞泰信息技术有限公司 All rights reserved.
- 创建人   : joe Song
- 创建时间 : 2016-03-10
- 说明     :  GetData & SaveData实现
- *********************************************************/
 /*global angular*/
 
 (function() {
     'use strict';
-    angular.module('xrmApp')
+    angular.module('ckApp')
         .service('rtData', ['$http', 'rtRestClient', 'rtUtils', function($http, rtRestClient, rtUtils) {
 
             /**
@@ -444,17 +432,11 @@
         }]);
 })();
 
-/********************************************************
- Copyright @ 苏州瑞泰信息技术有限公司 All rights reserved.
- 创建人   : joe Song
- 创建时间 : 2016-03-10
- 说明     : 封装文件上传下载部分的公用函数
- *********************************************************/
 /*global angular*/
 
 (function() {
     'use strict';
-    angular.module('xrmApp')
+    angular.module('ckApp')
         .service('rtFile', ['rtRestClient', 'rtUtils', '$q', function(rtRestClient, rtUtils, $q) {
             this.viewFile = function(moduleType, fileId, fileName) {
                 var baseUrl = rtRestClient.getBaseApiUrl() + 'FileDownloadHandler.ashx?download=0&moduleType=' + moduleType + '&fileid=' + fileId;
@@ -552,17 +534,11 @@
         }]);
 })();
 
-/********************************************************
- Copyright @ 苏州瑞泰信息技术有限公司 All rights reserved.
- 创建人   : joe Song
- 创建时间 : 2016-03-10
- 说明     : 格式化数据的Filter
- *********************************************************/
 /*global angular*/
 
 (function() {
     'use strict';
-    angular.module('xrmApp')
+    angular.module('ckApp')
         .filter('friendlyFormatDateTime', function() {
 
             function formatDateTime(d, format) {
@@ -711,17 +687,11 @@
         });
 })();
 
-/********************************************************
- Copyright @ 苏州瑞泰信息技术有限公司 All rights reserved.
- 创建人   : East Lv
- 创建时间 : 2016-03-10
- 说明     : IonicJS & AngularJS的对象
- *********************************************************/
 /*global angular*/
 
 (function() {
     'use strict';
-    angular.module('xrmApp')
+    angular.module('ckApp')
         .service('rtLibs', ['$ionicActionSheet', '$ionicHistory', '$ionicPopover', '$ionicLoading', '$state', '$stateParams', '$rootScope', '$timeout', function($ionicActionSheet, $ionicHistory, $ionicPopover, $ionicLoading, $state, $stateParams, $rootScope, $timeout) {
             this.ionicActionSheet = $ionicActionSheet;
             this.ionicHistory = $ionicHistory;
@@ -735,13 +705,9 @@
         }]);
 })();
 
-/**
- * Created by Edgar dong on 2016/6/7.
- */
-
 (function() {
     'use strict';
-    angular.module('xrmApp')
+    angular.module('ckApp')
         .service('rtMd5', [function() {
             /*
              * A JavaScript implementation of the RSA Data Security, Inc. MD5 Message
@@ -1007,17 +973,11 @@
         }]);
 })();
 
-/********************************************************
- Copyright @ 苏州瑞泰信息技术有限公司 All rights reserved.
- 创建人   : joe Song
- 创建时间 : 2016-03-10
- 说明     : 用户操作权限相关的帮助类
- *********************************************************/
 /*global angular*/
 
 (function() {
     'use strict';
-    angular.module('xrmApp')
+    angular.module('ckApp')
         .service('rtPrivilege', ['$http', 'rtRestClient', function($http, rtRestClient) {
 
             /**
@@ -1037,17 +997,11 @@
         }]);
 })();
 
-/********************************************************
- Copyright @ 苏州瑞泰信息技术有限公司 All rights reserved.
- 创建人   : joe Song
- 创建时间 : 2016-03-10
- 说明     : 请求WebApi的帮助函数
- *********************************************************/
 /*global angular*/
 
 (function() {
     'use strict';
-    angular.module('xrmApp')
+    angular.module('ckApp')
         .service('rtRestClient', ['$http', '$q', 'rtUtils', function($http, $q, rtUtils) {
             var _this = this;
 
@@ -1219,18 +1173,12 @@
         }]);
 })();
 
-/********************************************************
- Copyright @ 苏州瑞泰信息技术有限公司 All rights reserved.
- 创建人   : joe Song
- 创建时间 : 2016-03-10
- 说明     : 常用帮助函数，如是否是手机号等
- *********************************************************/
 /*global angular*/
 /*global BMap*/
 
 (function() {
     'use strict';
-    angular.module('xrmApp')
+    angular.module('ckApp')
         .service('rtUtils', ['$rootScope', '$http', '$ionicLoading', '$filter', '$ionicModal', '$ionicPopup', '$ionicViewService', '$timeout', '$ionicHistory', '$ionicActionSheet', '$state', '$translate', '$injector', '$q',
             function($rootScope, $http, $ionicLoading, $filter, $ionicModal, $ionicPopup, $ionicViewService, $timeout, $ionicHistory, $ionicActionSheet, $state, $translate, $injector, $q) {
                 /**
@@ -1935,11 +1883,11 @@
 
 /*global angular:false */
 /*global _:false */
-/*global xrmApp:false */
+/*global ckApp:false */
 /*global wx:false */
 (function() {
     'use strict';
-    angular.module('xrmApp')
+    angular.module('ckApp')
         .service('rtWechat', ['$http', '$q', 'rtRestClient', 'rtUtils', function($http, $q, rtRestClient, rtUtils) {
 
             /**
@@ -2367,22 +2315,16 @@
                 return str;
             }
 
-            _config();
+            // _config();
         }]);
 })();
 
-/********************************************************
- Copyright @ 苏州瑞泰信息技术有限公司 All rights reserved.
- 创建人   : joe Song
- 创建时间 : 2016-03-10
- 说明     :  将所有的公用函数库合并到rt对象中
- *********************************************************/
 /*global angular*/
 /*global _*/
 
 (function() {
     'use strict';
-    angular.module('xrmApp')
+    angular.module('ckApp')
         .service('rt', ['rtLibs', 'rtMd5', 'rtCalandar', 'rtUtils', 'rtRestClient', 'rtWechat', 'rtApp', 'rtData', 'rtFile',
             function(rtLibs, rtMd5, rtCalandar, rtUtils, rtRestClient, rtWechat, rtApp, rtData, rtFile) {
                 _.extend(this, rtLibs, rtMd5, rtCalandar, rtUtils, rtRestClient, rtWechat, rtApp, rtData, rtFile);
@@ -2390,15 +2332,9 @@
         ]);
 })();
 
-/********************************************************
- Copyright @ 苏州瑞泰信息技术有限公司 All rights reserved.
- 创建人   : Channing Kuo
- 创建时间 : 2016-12-12
- 说明     : 录音
- *********************************************************/
 (function() {
     'use strict';
-    xrmApp.controller("audioRecordController", ['$scope', 'rt', '$timeout', '$rootScope', audioRecordController]);
+    ckApp.controller("audioRecordController", ['$scope', 'rt', '$timeout', '$rootScope', audioRecordController]);
     function audioRecordController($scope, rt, $timeout, $rootScope) {
       //  还未录音         录音中         结束录音        正在播放录音
       var STARTRECOR = 0, RECORDING = 1, RECORDEND = 2, AUDIOPLAYING = 3;
@@ -2567,23 +2503,17 @@
 })();
 
 /*global UIMenu:false */
-/*global xrmApp:false */
+/*global ckApp:false */
 (function() {
     'use strict';
-    xrmApp.controller("blankController", [blankController]);
+    ckApp.controller("blankController", [blankController]);
 
     function blankController() {}
 })();
 
-/********************************************************
- Copyright @ 苏州瑞云信息技术有限公司 All rights reserved.
- 创建人   : 
- 创建时间 : 2016/4/1
- 说明     :可滑动预览照片
- *********************************************************/
 (function() {
     'use strict';
-    xrmApp.controller("cascadePickerController", ['$scope', '$ionicSlideBoxDelegate', 'rt', '$timeout', cascadePickerController]);
+    ckApp.controller("cascadePickerController", ['$scope', '$ionicSlideBoxDelegate', 'rt', '$timeout', cascadePickerController]);
 
     function cascadePickerController($scope, $ionicSlideBoxDelegate, rt, $timeout) {
 
@@ -2710,15 +2640,9 @@
     }
 })();
 
-/********************************************************
- Copyright @ 苏州瑞云信息技术有限公司 All rights reserved.
- 创建人   : 
- 创建时间 : 2016/4/1
- 说明     :可滑动预览照片
- *********************************************************/
 (function() {
     'use strict';
-    xrmApp.controller("datePickerController", ['$scope', '$ionicSlideBoxDelegate', 'rt', '$timeout', datePickerController]);
+    ckApp.controller("datePickerController", ['$scope', '$ionicSlideBoxDelegate', 'rt', '$timeout', datePickerController]);
 
     function datePickerController($scope, $ionicSlideBoxDelegate, rt, $timeout) {
 
@@ -2837,15 +2761,9 @@
     }
 })();
 
-/********************************************************
- Copyright @ 苏州瑞云信息技术有限公司 All rights reserved.
- 创建人   : Berry Ding
- 创建时间 : 2016/4/1
- 说明     :可滑动预览照片
- *********************************************************/
 (function() {
     'use strict';
-    xrmApp.controller("imagePreviewerController", ['$scope', '$stateParams', 'rt', '$timeout', '$rootScope', imagePreviewerController]);
+    ckApp.controller("imagePreviewerController", ['$scope', '$stateParams', 'rt', '$timeout', '$rootScope', imagePreviewerController]);
 
     function imagePreviewerController($scope, $stateParams, rt, $timeout, $rootScope) {
 
@@ -2879,16 +2797,9 @@
     }
 })();
 
-
-/********************************************************
- Copyright @ 苏州瑞泰信息技术有限公司 All rights reserved.
- 创建人   : Edgard Dong
- 创建时间 : 2016/7/18
- 说明     : 签名
- *********************************************************/
 (function() {
     'use strict';
-    xrmApp.controller("signatureController", ['$scope', '$stateParams', 'rt', '$timeout', '$rootScope', signatureController]);
+    ckApp.controller("signatureController", ['$scope', '$stateParams', 'rt', '$timeout', '$rootScope', signatureController]);
 
     function signatureController($scope, $stateParams, rt, $timeout, $rootScope) {
 
@@ -2926,12 +2837,6 @@
     }
 })();
 
-/********************************************************
- Copyright @ 苏州瑞泰信息技术有限公司 All rights reserved.
- 创建人   : East Lv
- 创建时间 : 2016-06-24
- 说明     : rt base controller
- *********************************************************/
 function rtBaseController(scope, rt) {
 
     var self = this;
@@ -3055,12 +2960,6 @@ function rtBaseController(scope, rt) {
     }
 }
 
-/********************************************************
- Copyright @ 苏州瑞泰信息技术有限公司 All rights reserved.
- 创建人   : joe Song
- 创建时间 : 2016-03-10
- 说明     : 自定义实体的列表页面
- *********************************************************/
 function rtListController(scope, rt) {
 
     var self = this;
@@ -3241,14 +3140,8 @@ function rtListController(scope, rt) {
     }
 }
 
-/********************************************************
- Copyright @ 苏州瑞泰信息技术有限公司 All rights reserved.
- 创建人   : Channing Kuo
- 创建时间 : 2017-02-06
- 说明     : 各种样式的Badge
- *********************************************************/
 /*global angular*/
-angular.module('xrmApp')
+angular.module('ckApp')
     .directive('rtBadge', ['rt', function(rt) {
         'use strict';
         return {
@@ -3361,15 +3254,9 @@ angular.module('xrmApp')
             };
     }]);
 
-/********************************************************
- Copyright @ 苏州瑞泰信息技术有限公司 All rights reserved.
- 创建人   : joe Song
- 创建时间 : 2016-03-10
- 说明     :  当没有数据时显示的空白图片
- *********************************************************/
 /*global angular*/
 
-angular.module('xrmApp')
+angular.module('ckApp')
     .directive('rtEmptyView', function() {
         "use strict";
         return {
@@ -3388,15 +3275,9 @@ angular.module('xrmApp')
         };
     });
 
-/********************************************************
- Copyright @ 苏州瑞泰信息技术有限公司 All rights reserved.
- 创建人   : joe Song
- 创建时间 : 2016-10-20
- 说明     : 可展开的控件
- *********************************************************/
 /*global angular*/
 
-angular.module('xrmApp')
+angular.module('ckApp')
     .directive('rtExpandable', function() {
         "use strict";
         return {
@@ -3424,7 +3305,7 @@ angular.module('xrmApp')
                         }else{
                             if($scope.rtOnCollapse){
                                 $scope.rtOnCollapse();
-                            }   
+                            }
                         }
 
                         $scope.$apply();
@@ -3464,17 +3345,11 @@ angular.module('xrmApp')
         }
     });;
 
-/********************************************************
- Copyright @ 苏州瑞泰信息技术有限公司 All rights reserved.
- 创建人   : East Lv
- 创建时间 : 2016-03-10
- 说明     : 高级查找的过滤视图
- *********************************************************/
 /*global angular:false */
 
 (function(window, document, undefined) {
     'use strict';
-    angular.module('xrmApp')
+    angular.module('ckApp')
         .directive('rtFilterContainer', ['rt', function(rt) {
             return {
                 restrict: 'E',
@@ -3526,14 +3401,8 @@ angular.module('xrmApp')
         });
 })(window, document);
 
-/********************************************************
-Copyright @ 苏州瑞泰信息技术有限公司 All rights reserved. 
- 创建人   : joe Song
- 创建时间 : 2016-03-10
- 说明     : 自动设置焦点的Directive
-*********************************************************/
-
-angular.module('xrmApp')
+/*global angular:false */
+angular.module('ckApp')
     .directive('focusOn', function() {
         return function(scope, element, attr) {
             scope.$on('focusOn', function(e, name) {
@@ -3551,18 +3420,12 @@ angular.module('xrmApp')
         };
     });
 
-/********************************************************
- Copyright @ 苏州瑞泰信息技术有限公司 All rights reserved.
- 创建人   : east lv & channing guo
- 创建时间 : 2016-05-12
- 说明     : 表单输入组件
- *********************************************************/
 /*global angular:false */
 
 (function(window, document, undefined) {
     'use strict';
 
-    angular.module('xrmApp')
+    angular.module('ckApp')
         /*-------   表单   -------*/
         .directive('rtForm', function() {
             return {
@@ -4013,14 +3876,8 @@ angular.module('xrmApp')
         }]);
 })(window, document);
 
-/********************************************************
- Copyright @ 苏州瑞泰信息技术有限公司 All rights reserved.
- 创建人   : Channing Guo
- 创建时间 : 2016-08-31
- 说明     : 图片懒加载
- *********************************************************/
 /*global angular*/
-angular.module('xrmApp')
+angular.module('ckApp')
     .directive('rtLazyScroll', ['$rootScope',
         function($rootScope) {
             return {
@@ -4168,15 +4025,9 @@ angular.module('xrmApp')
     };
 }]);
 
-/********************************************************
- Copyright @ 苏州瑞泰信息技术有限公司 All rights reserved.
- 创建人   :
- 创建时间 : 2016-03-10
- 说明     : 列表
- *********************************************************/
 /*global angular*/
 
-angular.module('xrmApp')
+angular.module('ckApp')
     /*-------   列表   -------*/
     .directive('rtList', function($timeout) {
         'use strict';
@@ -4209,18 +4060,12 @@ angular.module('xrmApp')
         };
     });
 
-/********************************************************
- Copyright @ 苏州瑞泰信息技术有限公司 All rights reserved.
- 创建人   : East Lv
- 创建时间 : 2016-06-03
- 说明     : 导航相关控件
- *********************************************************/
 /*global angular*/
 
 (function() {
     'use strict';
 
-    angular.module('xrmApp')
+    angular.module('ckApp')
         /*-------   列表   -------*/
         .directive('rtNavButtonBack', function() {
             return {
@@ -4275,14 +4120,9 @@ angular.module('xrmApp')
         });
 })();
 
-/********************************************************
- Copyright @ 苏州瑞泰信息技术有限公司 All rights reserved.
- 创建人   : Channing Kuo
- 创建时间 : 2016-12-21
- 说明     : 物流进度条
- *********************************************************/
 /*global angular*/
-angular.module('xrmApp')
+
+angular.module('ckApp')
     .directive('rtProcessSteps', ['rt', function(rt) {
         'use strict';
         return {
@@ -4310,14 +4150,9 @@ angular.module('xrmApp')
             };
     }]);
 
-/********************************************************
- Copyright @ 苏州瑞泰信息技术有限公司 All rights reserved.
- 创建人   : Channing Guo
- 创建时间 : 2016-05-03
- 说明     : 搜索栏组件
- *********************************************************/
 /*global angular*/
-angular.module('xrmApp')
+
+angular.module('ckApp')
     .directive('rtSearchBar', ['$timeout', 'rt', function ($timeout, rt) {
         'use strict';
         return {
@@ -4339,13 +4174,9 @@ angular.module('xrmApp')
         };
     }]);
 
-/********************************************************
- Copyright @ 苏州瑞泰信息技术有限公司 All rights reserved.
- 创建人   : Channing Guo
- 创建时间 : 2016-05-12
- 说明     : Section(节)组件
- *********************************************************/
-angular.module('xrmApp')
+/*global angular*/
+
+angular.module('ckApp')
     .directive('rtSection', function() {
         "use strict";
         return {
@@ -4360,14 +4191,10 @@ angular.module('xrmApp')
             }
         };
     });
-/********************************************************
- Copyright @ 苏州瑞泰信息技术有限公司 All rights reserved.
- 创建人   : Channing Guo
- 创建时间 : 2016-05-12
- 说明     : Tags组件
- *********************************************************/
+
 /*global angular*/
-angular.module('xrmApp')
+
+angular.module('ckApp')
     .directive('rtTags', function() {
         "use strict";
         return {
@@ -4459,18 +4286,12 @@ angular.module('xrmApp')
         };
     });
 
-/********************************************************
- Copyright @ 苏州瑞泰信息技术有限公司 All rights reserved.
- 创建人   : east lv
- 创建时间 : 2016-05-18
- 说明     : 缩略图
- *********************************************************/
 /*global angular:false */
 
 (function(window, document, undefined) {
     'use strict';
 
-    angular.module('xrmApp')
+    angular.module('ckApp')
         .directive('rtThumbnails', ['rt', function(rt) {
             return {
                 restrict: 'E',

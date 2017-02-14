@@ -1,6 +1,6 @@
 (function() {
     'use strict';
-    angular.module('xrmApp')
+    angular.module('ckApp')
         .service('rtCalandar', [function() {
             this.getCalandar = function(year, month) {
                 var calendar = [];

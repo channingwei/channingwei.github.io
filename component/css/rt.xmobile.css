@@ -1523,3 +1523,13 @@ Badge的样式表
   position: absolute;
   top: 12px;
   left: 52px; }
+
+/*============================================
+CK 样式表
+============================================*/
+.home-view {
+  width: 100%;
+  text-align: center;
+  background-color: rebeccapurple;
+  font-size: 100px;
+  font-family: PingFangSC-Ultralight, sans-serif; }

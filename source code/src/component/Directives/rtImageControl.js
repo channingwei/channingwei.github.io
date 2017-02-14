@@ -1,11 +1,5 @@
-/********************************************************
- Copyright @ 苏州瑞泰信息技术有限公司 All rights reserved.
- 创建人   : Channing Guo
- 创建时间 : 2016-08-31
- 说明     : 图片懒加载
- *********************************************************/
 /*global angular*/
-angular.module('xrmApp')
+angular.module('ckApp')
     .directive('rtLazyScroll', ['$rootScope',
         function($rootScope) {
             return {

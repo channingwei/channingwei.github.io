@@ -1,12 +1,6 @@
-/********************************************************
- Copyright @ 苏州瑞云信息技术有限公司 All rights reserved.
- 创建人   : 
- 创建时间 : 2016/4/1
- 说明     :可滑动预览照片
- *********************************************************/
 (function() {
     'use strict';
-    xrmApp.controller("cascadePickerController", ['$scope', '$ionicSlideBoxDelegate', 'rt', '$timeout', cascadePickerController]);
+    ckApp.controller("cascadePickerController", ['$scope', '$ionicSlideBoxDelegate', 'rt', '$timeout', cascadePickerController]);
 
     function cascadePickerController($scope, $ionicSlideBoxDelegate, rt, $timeout) {
 

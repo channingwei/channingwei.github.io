@@ -1,9 +1,3 @@
-/********************************************************
- Copyright @ 苏州瑞泰信息技术有限公司 All rights reserved.
- 创建人   : East Lv
- 创建时间 : 2016-06-24
- 说明     : rt base controller
- *********************************************************/
 function rtBaseController(scope, rt) {
 
     var self = this;

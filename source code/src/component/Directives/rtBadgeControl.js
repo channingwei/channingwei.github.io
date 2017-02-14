@@ -1,11 +1,5 @@
-/********************************************************
- Copyright @ 苏州瑞泰信息技术有限公司 All rights reserved.
- 创建人   : Channing Kuo
- 创建时间 : 2017-02-06
- 说明     : 各种样式的Badge
- *********************************************************/
 /*global angular*/
-angular.module('xrmApp')
+angular.module('ckApp')
     .directive('rtBadge', ['rt', function(rt) {
         'use strict';
         return {

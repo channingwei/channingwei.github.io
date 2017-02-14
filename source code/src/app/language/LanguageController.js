@@ -1,11 +1,11 @@
 /*global angular:false */
 /*global _:false */
-/*global xrmApp:false */
+/*global ckApp:false */
 /*global UITaskView:false */
 
 (function () {
     'use strict';
-    xrmApp.controller("LanguageController", ['$scope', '$state', '$ionicHistory', '$translate', 'rt', LanguageController]);
+    ckApp.controller("LanguageController", ['$scope', '$state', '$ionicHistory', '$translate', 'rt', LanguageController]);
     function LanguageController($scope, $state, $ionicHistory, $translate, rt) {
 
         function _init() {

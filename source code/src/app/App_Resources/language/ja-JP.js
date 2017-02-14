@@ -1,11 +1,11 @@
 ﻿/**
  * Created by lvdongbo on 2016/5/23.
  */
-/*global xrmApp*/
+/*global ckApp*/
 
 (function(){
     "use strict";
-    xrmApp.config(['$translateProvider', function ($translateProvider) {
+    ckApp.config(['$translateProvider', function ($translateProvider) {
         $translateProvider.translations('ja-JP', {
             'LOGIN_CHOOSE_LANGUAGE': '請選擇語言',
 

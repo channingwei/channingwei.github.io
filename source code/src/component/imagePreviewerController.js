@@ -1,12 +1,6 @@
-/********************************************************
- Copyright @ 苏州瑞云信息技术有限公司 All rights reserved.
- 创建人   : Berry Ding
- 创建时间 : 2016/4/1
- 说明     :可滑动预览照片
- *********************************************************/
 (function() {
     'use strict';
-    xrmApp.controller("imagePreviewerController", ['$scope', '$stateParams', 'rt', '$timeout', '$rootScope', imagePreviewerController]);
+    ckApp.controller("imagePreviewerController", ['$scope', '$stateParams', 'rt', '$timeout', '$rootScope', imagePreviewerController]);
 
     function imagePreviewerController($scope, $stateParams, rt, $timeout, $rootScope) {
 

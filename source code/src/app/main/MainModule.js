@@ -1,7 +1,7 @@
 /*global angular:false */
 /*global _:false */
-/*global xrmApp:false */
-xrmApp.config([
+/*global ckApp:false */
+ckApp.config([
     '$stateProvider', function($stateProvider) {
         'use strict';
         $stateProvider

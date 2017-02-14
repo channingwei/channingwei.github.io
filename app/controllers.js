@@ -1,11 +1,11 @@
 /*global angular:false */
 /*global _:false */
-/*global xrmApp:false */
+/*global ckApp:false */
 /*global UITaskView:false */
 
 (function () {
     'use strict';
-    xrmApp.controller("LanguageController", ['$scope', '$state', '$ionicHistory', '$translate', 'rt', LanguageController]);
+    ckApp.controller("LanguageController", ['$scope', '$state', '$ionicHistory', '$translate', 'rt', LanguageController]);
     function LanguageController($scope, $state, $ionicHistory, $translate, rt) {
 
         function _init() {
@@ -28,9 +28,78 @@
 
 
 
+/*global UIMenu:false */
+/*global ckApp:false */
+(function() {
+    'use strict';
+
+    function LoginController($scope, $state, $filter, rt) {
+        function _init() {
+            $scope.vm = {};
+            $scope.vm.isSavePassword = !!localStorage.XrmLoginIsSavePassword;
+            $scope.vm.userName = localStorage.XrmLoginUserName;
+            $scope.vm.password = localStorage.XrmLoginPassword;
+
+            $scope.selectLanguage = function() {
+                $state.go("app-language");
+            };
+
+            $scope.savePassword = function() {
+                $scope.vm.isSavePassword = !$scope.vm.isSavePassword;
+            };
+
+            $scope.setServerAddress = function() {
+                $state.go("app-serveraddress");
+            };
+
+            $scope.login = _login;
+        }
+
+        /**
+         * 登陆
+         * @private
+         */
+        function _login() {
+            if (rt.isNullOrEmptyString($scope.vm.userName)) {
+                rt.showErrorToast(rt.translate('LOGIN_PLS_INPUT_USERNAME'));
+                return;
+            }
+
+            if (rt.isNullOrEmptyString($scope.vm.password)) {
+                rt.showErrorToast(rt.translate('LOGIN_PLS_INPUT_PASSWORD'));
+                return;
+            }
+
+            localStorage.XrmLoginIsSavePassword = $scope.vm.isSavePassword;
+            localStorage.XrmLoginUserName = $scope.vm.userName;
+            localStorage.XrmLoginPassword = $scope.vm.password;
+
+            rt.showLoadingToast("登录中...");
+            rt.post("api/wechat/SimulateLogin", {
+                    uid: $scope.vm.userName,
+                    pwd: $scope.vm.password
+                })
+                .success(function(u) {
+                    rt.hideLoadingToast();
+                    localStorage.XrmAuthToken = u.AuthToken;
+                    localStorage.UserId = u.SystemUserId;
+                    $state.go("app-application");
+                })
+                .error(function(msg) {
+                    rt.hideLoadingToast();
+                    rt.showErrorToast(msg);
+                });
+        }
+
+        _init();
+    }
+
+    ckApp.controller("LoginController", ['$scope', '$state', '$filter', 'rt', LoginController]);
+})();
+
 /*global angular:false */
 /*global _:false */
-/*global xrmApp:false */
+/*global ckApp:false */
 /*global UITaskView:false */
 
 (function() {
@@ -72,17 +141,17 @@
         });
     }
 
-    xrmApp.controller("ApplicationController", ['$scope', '$state', 'rt', ApplicationController]);
+    ckApp.controller("ApplicationController", ['$scope', '$state', 'rt', ApplicationController]);
 })();
 
 /*global angular:false */
 /*global _:false */
-/*global xrmApp:false */
+/*global ckApp:false */
 /*global UITaskView:false */
 
 (function() {
     'use strict';
-    xrmApp.controller("HomeController", ['$rootScope','$scope', '$state', 'rt','$q',HomeController]);
+    ckApp.controller("HomeController", ['$rootScope','$scope', '$state', 'rt','$q',HomeController]);
     function HomeController($rootScope,$scope, $state, rt, $q) {
         $scope.vm = {};
         $scope.vm.data={};//仪表板数据
@@ -315,10 +384,10 @@
 
 
 /*global UIMenu:false */
-/*global xrmApp:false */
+/*global ckApp:false */
 (function () {
     'use strict';
-    xrmApp.controller("MainController", ['$scope', '$state', '$stateParams', 'rt', MainController]);
+    ckApp.controller("MainController", ['$scope', '$state', '$stateParams', 'rt', MainController]);
 
     function MainController($scope, $state, $stateParams, rt) {
         _init();
@@ -336,10 +405,10 @@
 
 
 /*global UIMenu:false */
-/*global xrmApp:false */
+/*global ckApp:false */
 (function () {
     'use strict';
-    xrmApp.controller("WorkspaceController", ['$scope', '$state', '$stateParams', 'rt', WorkspaceController]);
+    ckApp.controller("WorkspaceController", ['$scope', '$state', '$stateParams', 'rt', WorkspaceController]);
 
     function WorkspaceController($scope, $state, $stateParams, rt) {
         _init();
@@ -354,79 +423,10 @@
     }
 })();
 /*global UIMenu:false */
-/*global xrmApp:false */
-(function() {
-    'use strict';
-
-    function LoginController($scope, $state, $filter, rt) {
-        function _init() {
-            $scope.vm = {};
-            $scope.vm.isSavePassword = !!localStorage.XrmLoginIsSavePassword;
-            $scope.vm.userName = localStorage.XrmLoginUserName;
-            $scope.vm.password = localStorage.XrmLoginPassword;
-
-            $scope.selectLanguage = function() {
-                $state.go("app-language");
-            };
-
-            $scope.savePassword = function() {
-                $scope.vm.isSavePassword = !$scope.vm.isSavePassword;
-            };
-
-            $scope.setServerAddress = function() {
-                $state.go("app-serveraddress");
-            };
-
-            $scope.login = _login;
-        }
-
-        /**
-         * 登陆
-         * @private
-         */
-        function _login() {
-            if (rt.isNullOrEmptyString($scope.vm.userName)) {
-                rt.showErrorToast(rt.translate('LOGIN_PLS_INPUT_USERNAME'));
-                return;
-            }
-
-            if (rt.isNullOrEmptyString($scope.vm.password)) {
-                rt.showErrorToast(rt.translate('LOGIN_PLS_INPUT_PASSWORD'));
-                return;
-            }
-
-            localStorage.XrmLoginIsSavePassword = $scope.vm.isSavePassword;
-            localStorage.XrmLoginUserName = $scope.vm.userName;
-            localStorage.XrmLoginPassword = $scope.vm.password;
-
-            rt.showLoadingToast("登录中...");
-            rt.post("api/wechat/SimulateLogin", {
-                    uid: $scope.vm.userName,
-                    pwd: $scope.vm.password
-                })
-                .success(function(u) {
-                    rt.hideLoadingToast();
-                    localStorage.XrmAuthToken = u.AuthToken;
-                    localStorage.UserId = u.SystemUserId;
-                    $state.go("app-application");
-                })
-                .error(function(msg) {
-                    rt.hideLoadingToast();
-                    rt.showErrorToast(msg);
-                });
-        }
-
-        _init();
-    }
-
-    xrmApp.controller("LoginController", ['$scope', '$state', '$filter', 'rt', LoginController]);
-})();
-
-/*global UIMenu:false */
-/*global xrmApp:false */
+/*global ckApp:false */
 (function () {
     'use strict';
-    xrmApp.controller("ServerAddressController", ['$scope','$ionicHistory', ServerAddressController]);
+    ckApp.controller("ServerAddressController", ['$scope','$ionicHistory', ServerAddressController]);
 
     function ServerAddressController($scope,$ionicHistory) {
         _init();

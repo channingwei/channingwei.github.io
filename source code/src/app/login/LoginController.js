@@ -1,5 +1,5 @@
 /*global UIMenu:false */
-/*global xrmApp:false */
+/*global ckApp:false */
 (function() {
     'use strict';
 
@@ -64,5 +64,5 @@
         _init();
     }
 
-    xrmApp.controller("LoginController", ['$scope', '$state', '$filter', 'rt', LoginController]);
+    ckApp.controller("LoginController", ['$scope', '$state', '$filter', 'rt', LoginController]);
 })();

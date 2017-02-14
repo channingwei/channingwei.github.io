@@ -1,11 +1,3 @@
-/********************************************************
- Copyright @ 苏州瑞泰信息技术有限公司 All rights reserved.
- 创建人   : joe Song
- 创建时间 : 2016-03-10
- 说明     : 应用的全局路由和全局配置项目
- 版本号   ：7.4.4
- *********************************************************/
-
 (function(win) {
     'use strict';
 
@@ -25,7 +17,7 @@
         }]
     });
 
-    win.xrmApp = angular.module('xrmApp', ['ngIOS9UIWebViewPatch', 'ionic', 'ng-mfb', 'pascalprecht.translate', 'ngScrollTo'])
+    win.ckApp = angular.module('ckApp', ['ngIOS9UIWebViewPatch', 'ionic', 'ng-mfb', 'pascalprecht.translate', 'ngScrollTo'])
         .config(function() {})
         .config([
             '$compileProvider',
@@ -61,7 +53,7 @@
             '$stateProvider', '$urlRouterProvider',
             function($stateProvider, $urlRouterProvider) {
                 $stateProvider
-                    .state('xrmApp', {
+                    .state('ckApp', {
                         url: '/',
                         templateUrl: 'module/HomeView/HomeView.html',
                         controller: 'HomeController'

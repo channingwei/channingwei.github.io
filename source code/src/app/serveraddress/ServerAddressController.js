@@ -1,8 +1,8 @@
 /*global UIMenu:false */
-/*global xrmApp:false */
+/*global ckApp:false */
 (function () {
     'use strict';
-    xrmApp.controller("ServerAddressController", ['$scope','$ionicHistory', ServerAddressController]);
+    ckApp.controller("ServerAddressController", ['$scope','$ionicHistory', ServerAddressController]);
 
     function ServerAddressController($scope,$ionicHistory) {
         _init();

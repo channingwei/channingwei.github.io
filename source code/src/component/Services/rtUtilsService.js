@@ -1,15 +1,9 @@
-﻿/********************************************************
- Copyright @ 苏州瑞泰信息技术有限公司 All rights reserved.
- 创建人   : joe Song
- 创建时间 : 2016-03-10
- 说明     : 常用帮助函数，如是否是手机号等
- *********************************************************/
-/*global angular*/
+﻿/*global angular*/
 /*global BMap*/
 
 (function() {
     'use strict';
-    angular.module('xrmApp')
+    angular.module('ckApp')
         .service('rtUtils', ['$rootScope', '$http', '$ionicLoading', '$filter', '$ionicModal', '$ionicPopup', '$ionicViewService', '$timeout', '$ionicHistory', '$ionicActionSheet', '$state', '$translate', '$injector', '$q',
             function($rootScope, $http, $ionicLoading, $filter, $ionicModal, $ionicPopup, $ionicViewService, $timeout, $ionicHistory, $ionicActionSheet, $state, $translate, $injector, $q) {
                 /**

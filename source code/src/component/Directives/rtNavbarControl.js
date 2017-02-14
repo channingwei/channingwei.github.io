@@ -1,15 +1,9 @@
-/********************************************************
- Copyright @ 苏州瑞泰信息技术有限公司 All rights reserved.
- 创建人   : East Lv
- 创建时间 : 2016-06-03
- 说明     : 导航相关控件
- *********************************************************/
 /*global angular*/
 
 (function() {
     'use strict';
 
-    angular.module('xrmApp')
+    angular.module('ckApp')
         /*-------   列表   -------*/
         .directive('rtNavButtonBack', function() {
             return {

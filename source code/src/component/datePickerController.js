@@ -1,12 +1,6 @@
-/********************************************************
- Copyright @ 苏州瑞云信息技术有限公司 All rights reserved.
- 创建人   : 
- 创建时间 : 2016/4/1
- 说明     :可滑动预览照片
- *********************************************************/
 (function() {
     'use strict';
-    xrmApp.controller("datePickerController", ['$scope', '$ionicSlideBoxDelegate', 'rt', '$timeout', datePickerController]);
+    ckApp.controller("datePickerController", ['$scope', '$ionicSlideBoxDelegate', 'rt', '$timeout', datePickerController]);
 
     function datePickerController($scope, $ionicSlideBoxDelegate, rt, $timeout) {
 

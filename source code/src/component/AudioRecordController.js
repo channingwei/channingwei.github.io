@@ -1,12 +1,6 @@
-/********************************************************
- Copyright @ 苏州瑞泰信息技术有限公司 All rights reserved.
- 创建人   : Channing Kuo
- 创建时间 : 2016-12-12
- 说明     : 录音
- *********************************************************/
 (function() {
     'use strict';
-    xrmApp.controller("audioRecordController", ['$scope', 'rt', '$timeout', '$rootScope', audioRecordController]);
+    ckApp.controller("audioRecordController", ['$scope', 'rt', '$timeout', '$rootScope', audioRecordController]);
     function audioRecordController($scope, rt, $timeout, $rootScope) {
       //  还未录音         录音中         结束录音        正在播放录音
       var STARTRECOR = 0, RECORDING = 1, RECORDEND = 2, AUDIOPLAYING = 3;

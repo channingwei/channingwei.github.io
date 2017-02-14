@@ -1,10 +1,10 @@
 /*global angular:false */
 /*global _:false */
-/*global xrmApp:false */
+/*global ckApp:false */
 /*global wx:false */
 (function() {
     'use strict';
-    angular.module('xrmApp')
+    angular.module('ckApp')
         .service('rtWechat', ['$http', '$q', 'rtRestClient', 'rtUtils', function($http, $q, rtRestClient, rtUtils) {
 
             /**
@@ -432,6 +432,6 @@
                 return str;
             }
 
-            _config();
+            // _config();
         }]);
 })();

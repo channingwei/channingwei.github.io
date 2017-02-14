@@ -1,6 +1,6 @@
 /*global angular:false */
 /*global _:false */
-/*global xrmApp:false */
+/*global ckApp:false */
 /*global UITaskView:false */
 
 (function() {
@@ -42,5 +42,5 @@
         });
     }
 
-    xrmApp.controller("ApplicationController", ['$scope', '$state', 'rt', ApplicationController]);
+    ckApp.controller("ApplicationController", ['$scope', '$state', 'rt', ApplicationController]);
 })();

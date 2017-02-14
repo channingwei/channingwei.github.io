@@ -1,12 +1,12 @@
 /*global angular:false */
 /*global _:false */
-/*global xrmApp:false */
-xrmApp.config([
+/*global ckApp:false */
+ckApp.config([
     '$stateProvider', '$urlRouterProvider',
     function($stateProvider, $urlRouterProvider) {
         'use strict';
         $stateProvider
-            .state('xrmApp', {
+            .state('ckApp', {
                 url: '/',
                 templateUrl: 'component/Components/blankView.html',
                 controller: 'blankController'

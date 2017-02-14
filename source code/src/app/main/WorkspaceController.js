@@ -1,8 +1,8 @@
 /*global UIMenu:false */
-/*global xrmApp:false */
+/*global ckApp:false */
 (function () {
     'use strict';
-    xrmApp.controller("WorkspaceController", ['$scope', '$state', '$stateParams', 'rt', WorkspaceController]);
+    ckApp.controller("WorkspaceController", ['$scope', '$state', '$stateParams', 'rt', WorkspaceController]);
 
     function WorkspaceController($scope, $state, $stateParams, rt) {
         _init();

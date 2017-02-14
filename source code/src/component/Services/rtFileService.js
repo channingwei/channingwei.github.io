@@ -1,14 +1,8 @@
-﻿/********************************************************
- Copyright @ 苏州瑞泰信息技术有限公司 All rights reserved.
- 创建人   : joe Song
- 创建时间 : 2016-03-10
- 说明     : 封装文件上传下载部分的公用函数
- *********************************************************/
-/*global angular*/
+﻿/*global angular*/
 
 (function() {
     'use strict';
-    angular.module('xrmApp')
+    angular.module('ckApp')
         .service('rtFile', ['rtRestClient', 'rtUtils', '$q', function(rtRestClient, rtUtils, $q) {
             this.viewFile = function(moduleType, fileId, fileName) {
                 var baseUrl = rtRestClient.getBaseApiUrl() + 'FileDownloadHandler.ashx?download=0&moduleType=' + moduleType + '&fileid=' + fileId;

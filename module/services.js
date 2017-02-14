@@ -1,6 +1,6 @@
 /*global angular:false */
-/*global xrmApp:false */
-xrmApp.factory('DemoService', ['rt', function (rt) {
+/*global ckApp:false */
+ckApp.factory('DemoService', ['rt', function (rt) {
    'use strict';
 
    // TODO
