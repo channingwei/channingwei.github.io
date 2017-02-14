@@ -63,8 +63,8 @@
                 $stateProvider
                     .state('xrmApp', {
                         url: '/',
-                        templateUrl: 'component/blankView.html',
-                        controller: 'blankController'
+                        templateUrl: 'module/HomeView/HomeView.html',
+                        controller: 'HomeController'
                     })
                     .state('app-close', {
                         url: '/app/close',

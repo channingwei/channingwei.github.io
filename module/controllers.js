@@ -7,6 +7,27 @@
 (function () {
     'use strict';
 
+    xrmApp.controller("TestController", ['$scope', '$filter', '$state', '$compile', 'rt', '$ionicScrollDelegate', HomeController]);
+    function HomeController($scope, $filter, $state, $compile, rt, $ionicScrollDelegate) {
+
+        function init() {
+
+        }
+
+        init();
+    }
+
+})();
+
+/*global angular:false */
+/*global _:false */
+/*global xrmApp:false */
+/*global UITaskView:false */
+
+
+(function () {
+    'use strict';
+
     function TestController($scope, $filter, $state, $compile, rt, $ionicScrollDelegate) {
 
         function init() {
@@ -42,7 +63,7 @@
            * @pritive
            */
            $scope.previewImage = function(localId, index){
-             wx.previewImage({
+             rt.previewImage({
                  current: localId,
                  urls: $scope.wx.ScenePhotoes
              });

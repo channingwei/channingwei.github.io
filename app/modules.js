@@ -15,32 +15,6 @@ xrmApp.config([
 /*global _:false */
 /*global xrmApp:false */
 xrmApp.config([
-    '$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
-        'use strict';
-        $stateProvider
-            .state('app-login', {
-                url: '/app/login',
-                templateUrl: 'app/login/loginView.html',
-                controller: 'LoginController'
-            });
-    }]);
-/*global angular:false */
-/*global _:false */
-/*global xrmApp:false */
-xrmApp.config([
-    '$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
-        'use strict';
-        $stateProvider
-            .state('app-serveraddress', {
-                url: '/app/serveraddress',
-                templateUrl: 'app/serveraddress/serverAddressView.html',
-                controller: 'ServerAddressController'
-            });
-    }]);
-/*global angular:false */
-/*global _:false */
-/*global xrmApp:false */
-xrmApp.config([
     '$stateProvider', function($stateProvider) {
         'use strict';
         $stateProvider
@@ -68,5 +42,31 @@ xrmApp.config([
                 url: '/app/raw-open-contact',
                 templateUrl: 'app/main/workspaceView.html',
                 controller: 'WorkspaceController'
+            });
+    }]);
+/*global angular:false */
+/*global _:false */
+/*global xrmApp:false */
+xrmApp.config([
+    '$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
+        'use strict';
+        $stateProvider
+            .state('app-login', {
+                url: '/app/login',
+                templateUrl: 'app/login/loginView.html',
+                controller: 'LoginController'
+            });
+    }]);
+/*global angular:false */
+/*global _:false */
+/*global xrmApp:false */
+xrmApp.config([
+    '$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
+        'use strict';
+        $stateProvider
+            .state('app-serveraddress', {
+                url: '/app/serveraddress',
+                templateUrl: 'app/serveraddress/serverAddressView.html',
+                controller: 'ServerAddressController'
             });
     }]);

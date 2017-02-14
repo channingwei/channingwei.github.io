@@ -1,4 +1,4 @@
-﻿/********************************************************
+/********************************************************
  Copyright @ 苏州瑞泰信息技术有限公司 All rights reserved.
  创建人   : joe Song
  创建时间 : 2016-03-10
@@ -63,8 +63,8 @@
                 $stateProvider
                     .state('xrmApp', {
                         url: '/',
-                	templateUrl: 'module/test/testView.html',
-                	controller: 'TestController'
+                        templateUrl: 'module/HomeView/HomeView.html',
+                        controller: 'HomeController'
                     })
                     .state('app-close', {
                         url: '/app/close',
