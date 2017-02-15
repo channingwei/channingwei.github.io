@@ -313,10 +313,10 @@ var fluid = function() {
     };
 
 }();
-
-fluid.init('c', 800, 800);
+var _width = document.documentElement.clientWidth - 200;
+fluid.init('c', _width, 550);
 
 document.getElementById('reset').onmousedown = function() {
     fluid.stop();
-    setTimeout(function(){fluid.init('c', 800, 366)}, 100);
+    setTimeout(function(){fluid.init('c', _width, 550)}, 100);
 }

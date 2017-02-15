@@ -678,7 +678,7 @@
                 }
 
                 this.getScreenHeight = function(containHeader) {
-                    return document.documentElement.clientHeight || document.body.clientHeight
+                    return document.documentElement.clientHeight || document.body.clientHeight;
                 }
 
                 this.showDatePickerDialog = function(config) {
