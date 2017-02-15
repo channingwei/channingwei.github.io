@@ -219,7 +219,7 @@ gulp.task('bulid-debug', function() {
    var jsExt = min + '.js?v=' + version;
    var cssExt = min + '.css?v=' + version;
 
-   gulp.src('src/index.html')
+   gulp.src('src/HomePage.html')
       .pipe(htmlreplace({
          js: [
             "lib/lodash/js/lodash.min.js?v=" + version,
