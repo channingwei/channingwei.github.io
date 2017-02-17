@@ -8,6 +8,12 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/default.css">
 	<link rel="stylesheet" type="text/css" href="assets/fonts/font-awesome-4.3.0/css/font-awesome.min.css" />
 	<link rel="stylesheet" type="text/css" href="assets/css/share.css" />
+	<style>
+		.content-position{
+			transition: 1s;
+			right: 50px !important;
+		}
+	</style>
 </head>
 <body>
 	<div id="helloworld" style="z-index: 101;color: white;position: absolute;width: 100%;text-align: center;background-color: transparent;font-size: 100px;font-family: PingFangSC-Ultralight, sans-serif;">
@@ -26,30 +32,39 @@
 			</div>
 		</div>
 	</div>
-	<div class="content" style="position: absolute;z-index: 300;max-width: 600px;right: 300px;bottom: 0px;">
+	<iframe id="star" src="https://ghbtns.com/github-btn.html?user=channingwei&repo=channingwei.github.io&type=star&count=true"
+				frameborder="0" scrolling="0" width="170px" height="20px"
+				style="display: block;position: absolute;left: 0px;bottom: 0px;z-index: 1000;"></iframe>
+	<iframe id="watch" src="https://ghbtns.com/github-btn.html?user=channingwei&repo=channingwei.github.io&type=watch&count=true&v=2"
+				frameborder="0" scrolling="0" width="170px" height="20px"
+				style="display: block;position: absolute;left: 100px;bottom: 0px;z-index: 1000;"></iframe>
+	<iframe id="fork" src="https://ghbtns.com/github-btn.html?user=channingwei&repo=channingwei.github.io&type=fork&count=true"
+				frameborder="0" scrolling="0" width="170px" height="20px"
+				style="display: block;position: absolute;left: 210px;bottom: 0px;z-index: 1000;"></iframe>
+	<div class="content" style="position: absolute;z-index: 300;max-width: 600px;right: 250px;bottom: 0px;">
 		<div class="share">
 			<button class="share-toggle-button">
-				<i class="share-icon fa fa-share-alt"></i>
+				<i class="share-icon fa fa-circle"></i>
 			</button>
 			<ul class="share-items">
 				<li class="share-item">
-					<a href="#" class="share-button">
-						<i class="share-icon fa fa-facebook"></i>
+					<a href="https://github.com/channingwei/channingwei.github.io" target="_blank" rel="friend" class="share-button">
+						<i class="share-icon fa fa-github"></i>
+					</a>
+				</li>
+				<li class="share-item">
+					<a id="reset" class="share-button" style="cursor: pointer;">
+						<i class="share-icon fa fa-spinner"></i>
 					</a>
 				</li>
 				<li class="share-item">
 					<a href="#" class="share-button">
-						<i class="share-icon fa fa-twitter"></i>
+						<i class="share-icon fa fa-github-alt"></i>
 					</a>
 				</li>
 				<li class="share-item">
 					<a href="HomePage.html" class="share-button">
-						<i class="share-icon fa fa-pinterest"></i>
-					</a>
-				</li>
-				<li class="share-item">
-					<a id="reset" class="share-button">
-						<i class="share-icon fa fa-tumblr"></i>
+						<i class="share-icon fa fa-superscript"></i>
 					</a>
 				</li>
 			</ul>
