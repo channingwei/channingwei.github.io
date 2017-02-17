@@ -2,7 +2,7 @@ $(document).ready(function(){
 	var $shareButtons=$(".share-button")
 		,$toggleButton=$(".share-toggle-button")
 
-		,menuOpen=false
+		,menuOpen=true
 		,buttonsNum=$shareButtons.length
 		,buttonsMid=(buttonsNum/2)
 		,spacing=75
@@ -91,6 +91,7 @@ $(document).ready(function(){
 		menuOpen?openShareMenu():closeShareMenu();
 		// TODO 变更图标的位置
 	}
+	openShareMenu();
 	$toggleButton.on("mousedown",function(){
 		toggleShareMenu();
 	})

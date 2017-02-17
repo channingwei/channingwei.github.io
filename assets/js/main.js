@@ -314,9 +314,10 @@ var fluid = function() {
 
 }();
 var _width = document.documentElement.clientWidth - 200;
-fluid.init('c', _width, 550);
+var _height = 550 * document.documentElement.clientHeight / 804
+fluid.init('c', _width, _height);
 
 document.getElementById('reset').onmousedown = function() {
     fluid.stop();
-    setTimeout(function(){fluid.init('c', _width, 550)}, 100);
+    setTimeout(function(){fluid.init('c', _width, _height)}, 100);
 }
