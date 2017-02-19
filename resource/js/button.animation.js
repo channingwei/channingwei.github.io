@@ -15,9 +15,9 @@ $(document).ready(function(){
 			$(".content").removeClass("content-position");
 			$(".content").css("transition", "1s");
 			// 分裂按钮后显示git start watch fork
-			$(".git-star").css("display", "block");
-			$(".git-watch").css("display", "block");
-			$(".git-fork").css("display", "block");
+			// $(".git-star").css("display", "block");
+			// $(".git-watch").css("display", "block");
+			// $(".git-fork").css("display", "block");
 		}
 		setTimeout(function(){
 			TweenMax.to($toggleButton, 0.1, {

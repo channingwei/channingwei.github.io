@@ -332,15 +332,8 @@ a.share-button:focus {
 	font-size: 100px;
 	font-family: PingFangSC-Ultralight, sans-serif;
 }
-.index-background{
-	z-index: 100;
-	position: absolute;
-	width: 100%;
-	background-image: url(../img/bg.jpg);
-	height: 100%;
-}
 .canvas-water-flow{
-	position: relative;
+	position: absolute;
 	z-index: 200;
 }
 .git-star{

@@ -8,12 +8,18 @@
 	<link rel="stylesheet" type="text/css" href="resource/css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="resource/css/default.css">
 	<link rel="stylesheet" type="text/css" href="resource/fonts/font-awesome-4.3.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="resource/css/bana.css">
 </head>
 <body>
 	<!--Hello World-->
 	<div id="helloworld" class="hello-world">Hello World</div>
 	<!--Background-->
-	<div id="background" class="index-background"></div>
+	<div class="background">
+		<div class="slider"></div>
+		<ul class="nav"></ul>
+		<div data-target='right' class="side-nav side-nav--right"></div>
+		<div data-target='left' class="side-nav side-nav--left"></div>
+	</div>
 	<!--canvas water flow-->
 	<div id="layer" class="canvas-water-flow">
 		<div class="htmleaf-container">
@@ -63,8 +69,10 @@
 	<script src="resource/js/jquery.min.js"></script>
 	<script src="resource/js/tweenmax.min.js"></script>
 	<script src="resource/js/button.animation.js"></script>
+	<script src="resource/js/bana.js"></script>
 	<script type="text/javascript">
 		document.getElementById('layer').style.top = (document.documentElement.clientHeight - 606 * document.documentElement.clientHeight / 804) / 2 + "px";
+		document.getElementById('layer').style.left = 100 + "px";
 		document.getElementById('helloworld').style.height = (document.documentElement.clientHeight - 606 * document.documentElement.clientHeight / 804) / 2 + "px";
 		document.getElementById('helloworld').style.lineHeight = (document.documentElement.clientHeight - 606 * document.documentElement.clientHeight / 804) / 2 + "px";
 	</script>
