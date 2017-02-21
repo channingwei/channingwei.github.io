@@ -5,10 +5,10 @@ ckApp.config([
     '$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
         'use strict';
         $stateProvider
-            .state('app-login', {
-                url: '/app/login',
-                templateUrl: 'app/login/loginView.html',
-                controller: 'LoginController'
+            .state('app-language', {
+                url: '/app/language',
+                templateUrl: 'app/language/languageView.html',
+                controller: 'LanguageController'
             });
     }]);
 /*global angular:false */
@@ -18,10 +18,10 @@ ckApp.config([
     '$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
         'use strict';
         $stateProvider
-            .state('app-language', {
-                url: '/app/language',
-                templateUrl: 'app/language/languageView.html',
-                controller: 'LanguageController'
+            .state('app-login', {
+                url: '/app/login',
+                templateUrl: 'app/login/loginView.html',
+                controller: 'LoginController'
             });
     }]);
 /*global angular:false */
