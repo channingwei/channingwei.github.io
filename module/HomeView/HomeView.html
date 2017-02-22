@@ -1,7 +1,58 @@
-<ion-view title="Home View" hide-nav-bar="true">
-   <div class="home-view"
-      style="height: {{ screenHeight }}px;
-               line-height: {{ screenHeight }}px;">
-      Hello World
-   </div>
+<ion-view title="Channing Kuo" hide-nav-bar="true">
+   <style>
+      .blog-chapter-item{
+         padding-left: 232px;
+         min-height: 232px;
+         width: 60% !important;
+         margin-left: 20% !important;
+         cursor: pointer;
+         border: none !important;
+      }
+      .item.activated{
+         border: none !important;
+         background-color: #fff !important;
+      }
+      .blog-chapter-img{
+         max-height: 200px !important;
+         max-width: 200px !important;
+      }
+      .blog-chapter-title{
+         text-align: center;
+         font-size: 30px !important;
+         margin-top: 14px !important;
+      }
+      .blog-chapter-title:hover{
+         text-decoration: underline;
+      }
+      .blog-chapter-content{
+         font-size: 15px;
+         text-overflow: ellipsis !important;
+         white-space: pre-line !important;
+      }
+      .blog-chapter-date{
+         position: absolute;
+         right: 40px;
+         font-size: 14px;
+         color: gray;
+      }
+      .blog-chapter-extra{
+
+      }
+   </style>
+   <!--两侧边栏-->
+
+   <!--Scroll滚动页面-->
+   <ion-content>
+      <div class="list">
+         <div class="item  item-avatar blog-chapter-item" ng-repeat="chapter in chapters" ng-click="watchTheChapter(chapter)">
+            <img class="blog-chapter-img" src="{{ chapter.image }}" />
+            <h2 class="blog-chapter-title">{{ chapter.title }}</h2>
+            <p class="blog-chapter-content">{{ chapter.content }}</p>
+            <div class="blog-chapter-date">{{ chapter.date }}</div>
+            <!-- <div ng-repeat="label in chapter.extra">
+               <div class="blog-chapter-extra">{{ label }}</div>
+            </div> -->
+         </div>
+      </div>
+   </ion-content>
 </ion-view>
