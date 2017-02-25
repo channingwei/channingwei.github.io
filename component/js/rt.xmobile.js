@@ -1128,7 +1128,7 @@
              * @returns {HttpPromise}
              */
             this.get = function(apiUrl, ignoreError) {
-                var url = this.getBaseApiUrl() + apiUrl;
+                var url = apiUrl;
 
                 _setupHttpHeader($http);
 
@@ -1142,7 +1142,7 @@
              * @returns {HttpPromise}
              */
             this.post = function(apiUrl, data) {
-                var url = this.getBaseApiUrl() + apiUrl;
+                var url = apiUrl;
 
                 _setupHttpHeader($http);
 
@@ -1150,7 +1150,7 @@
             };
 
             this.delete = function(apiUrl) {
-                var url = this.getBaseApiUrl() + apiUrl;
+                var url = apiUrl;
 
                 _setupHttpHeader($http);
 
@@ -1164,7 +1164,7 @@
              * @returns {HttpPromise}
              */
             this.put = function(apiUrl, data) {
-                var url = this.getBaseApiUrl() + apiUrl;
+                var url = apiUrl;
 
                 _setupHttpHeader($http);
 

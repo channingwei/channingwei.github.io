@@ -44,6 +44,19 @@
          ];
 
          $scope.watchTheChapter = _watchTheChapter;
+
+         loadBlogList();
+      }
+
+      /**
+      * 加载blog列表
+      */
+      function loadBlogList(){
+         HomeService.getTheList().success(function(data){
+            $scope.data = data;
+         }).error(function(err){
+            kuo.showErrorToast(err);
+         });
       }
 
       /**
