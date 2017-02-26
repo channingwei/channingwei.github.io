@@ -4,7 +4,7 @@ ckApp.factory('HomeService', ['kuo', function (kuo) {
    'use strict';
 
    function _getTheList(){
-      var api = "https://api.github.com/repos/channingwei/iPassword-swift/issues?state=closed";
+      var api = "https://api.github.com/repos/channingwei/channingwei.github.io/issues?state=open";
       return kuo.get(api);
    }
 

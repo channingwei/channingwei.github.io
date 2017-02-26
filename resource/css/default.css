@@ -250,7 +250,7 @@ a:hover,a:focus{color:#74777b;}
    height: 100px;
    margin: 0 auto;
    -webkit-filter: url("#goo");
-   filter: url("../share.html#goo");
+   /*filter: url("../share.html#goo");*/
    position: relative;
 }
 

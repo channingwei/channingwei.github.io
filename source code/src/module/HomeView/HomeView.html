@@ -44,8 +44,8 @@
    <!--Scroll滚动页面-->
    <ion-content>
       <div class="list">
-         <div class="item  item-avatar blog-chapter-item" ng-repeat="chapter in chapters" ng-click="watchTheChapter(chapter)">
-            <img class="blog-chapter-img" src="{{ chapter.image }}" />
+         <div class="item  item-avatar blog-chapter-item" ng-repeat="chapter in chapters" ng-click="watchTheChapter(chapter.id)">
+            <img class="blog-chapter-img" ng-src="{{ chapter.image }}" />
             <h2 class="blog-chapter-title">{{ chapter.title }}</h2>
             <p class="blog-chapter-content">{{ chapter.content }}</p>
             <div class="blog-chapter-date">{{ chapter.date }}</div>

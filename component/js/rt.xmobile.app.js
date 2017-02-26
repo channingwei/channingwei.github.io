@@ -14,6 +14,10 @@
             name: 'signature_pad',
             location: './lib/signature',
             main: 'signature'
+        }, {
+           name: 'markdown',
+           location: './lib/markdown/js',
+           main: 'markdown'
         }]
     });
 

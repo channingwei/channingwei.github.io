@@ -1,17 +1,17 @@
 'use strict';
 
 $(document).ready(function () {
-	$.ajax(
-   {
-      type: 'get',
-      url: 'http://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=7',
-      success: function(response, opts) {
-         console.log(response.images[0].url);
-      },
-      error: function(response, opts) {
-         console.log(response);
-      }
-   });
+	// $.ajax(
+   // {
+   //    type: 'get',
+   //    url: 'http://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=7',
+   //    success: function(response, opts) {
+   //       console.log(response.images[0].url);
+   //    },
+   //    error: function(response, opts) {
+   //       console.log(response);
+   //    }
+   // });
 
 
 	var $slider = $('.slider');

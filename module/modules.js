@@ -5,10 +5,10 @@ ckApp.config([
    '$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
    'use strict';
    $stateProvider
-      .state('home-view', {
-         url: '/home',
-         templateUrl: 'module/HomeView/HomeView.html',
-         controller: 'HomeController'
+      .state('chapter-view', {
+         url: '/chapter/:id',
+         templateUrl: 'module/Chapter/ChapterView.html',
+         controller: 'ChapterController'
       }
    );
    $urlRouterProvider.otherwise("/");
@@ -21,10 +21,10 @@ ckApp.config([
    '$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
    'use strict';
    $stateProvider
-   .state('test-testview', {
-      url: '/test/testview',
-         templateUrl: 'module/test/testView.html',
-         controller: 'TestController'
+      .state('home-view', {
+         url: '/home',
+         templateUrl: 'module/HomeView/HomeView.html',
+         controller: 'HomeController'
       }
    );
    $urlRouterProvider.otherwise("/");

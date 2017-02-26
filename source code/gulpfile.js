@@ -101,6 +101,15 @@ gulp.task('bulid-debug', function() {
 
    gulp.src('src/lib/**/fonts/*.*')
       .pipe(gulp.dest(destFolder + '/lib'));
+
+   gulp.src('src/lib/markdown/js/*.js')
+      .pipe(gulp.dest(destFolder + '/lib/markdown/js'));
+
+   gulp.src('src/lib/markdown/js/*.min.js')
+      .pipe(gulp.dest(destFolder + '/lib/markdown/js'));
+
+   gulp.src('src/lib/markdown/css/*.min.css')
+      .pipe(gulp.dest(destFolder + '/lib/markdown/css'));
    /*********************   lib end  *********************/
 
    /*********************   component start  *********************/
@@ -233,6 +242,7 @@ gulp.task('bulid-debug', function() {
             "lib/require/require.min.js?v=" + version,
             "lib/cache/js/cache-1.0.js?v=" + version,
             "lib/mfb/mfb.js?v=" + version,
+            "lib/markdown/js/markdown.js?v=" + version,
 
             "component/js/rt.xmobile.app" + jsExt,
             "component/js/rt.xmobile" + jsExt,
@@ -250,11 +260,12 @@ gulp.task('bulid-debug', function() {
          ],
          css: [
             "lib/ionic/css/ionic.min.css?v=" + version,
-            "lib/ionic/css/ionic.radio.css?v=" + version,
-            "lib/timeline/timeline.css?v=" + version,
-            "lib/mfb/mfb.css?v=" + version,
-            "lib/wechat/css/weui.min.css?v=" + version,
-            "component/css/rt.xmobile.css?v=" + version
+            "lib/markdown/css/bootstrap.min.css?v=" + version
+            // "lib/ionic/css/ionic.radio.css?v=" + version,
+            // "lib/timeline/timeline.css?v=" + version,
+            // "lib/mfb/mfb.css?v=" + version,
+            // "lib/wechat/css/weui.min.css?v=" + version,
+            // "component/css/rt.xmobile.css?v=" + version
          ]
       })).pipe(gulp.dest(destFolder + '/'));
 });
