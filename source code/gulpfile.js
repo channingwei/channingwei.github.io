@@ -225,24 +225,24 @@ gulp.task('bulid-debug', function() {
    /*********************   module end  *********************/
 
    var min = IS_RELEASE_BUILD ? ".min" : "";
-   var jsExt = min + '.js?v=' + version;
-   var cssExt = min + '.css?v=' + version;
+   var jsExt = min + '.js';
+   var cssExt = min + '.css';
 
    gulp.src('src/HomePage.html')
       .pipe(htmlreplace({
          js: [
-            "lib/lodash/js/lodash.min.js?v=" + version,
-            "lib/moment-2.10.6/moment-with-locales.min.js?v=" + version,
-            "lib/wechat/js/jweixin-1.2.0.js?v=" + version,
-            "lib/aliyun-oss/aliyun-oss-sdk-4.4.4.min.js?v=" + version,
-            "lib/ionic/js/ionic.bundle.min.js?v=" + version,
-            "lib/angular/js/angular-translate.min.js?v=" + version,
-            "lib/angular/js/angular-scrollto.js?v=" + version,
-            "lib/angular/js/angular-ios9-uiwebview-patch.min.js?v=" + version,
-            "lib/require/require.min.js?v=" + version,
-            "lib/cache/js/cache-1.0.js?v=" + version,
-            "lib/mfb/mfb.js?v=" + version,
-            "lib/markdown/js/markdown.js?v=" + version,
+            "lib/lodash/js/lodash.min.js",
+            "lib/moment-2.10.6/moment-with-locales.min.js",
+            "lib/wechat/js/jweixin-1.2.0.js",
+            "lib/aliyun-oss/aliyun-oss-sdk-4.4.4.min.js",
+            "lib/ionic/js/ionic.bundle.min.js",
+            "lib/angular/js/angular-translate.min.js",
+            "lib/angular/js/angular-scrollto.js",
+            "lib/angular/js/angular-ios9-uiwebview-patch.min.js",
+            "lib/require/require.min.js",
+            "lib/cache/js/cache-1.0.js",
+            "lib/mfb/mfb.js",
+            "lib/markdown/js/markdown.min.js",
 
             "component/js/rt.xmobile.app" + jsExt,
             "component/js/rt.xmobile" + jsExt,
@@ -259,13 +259,13 @@ gulp.task('bulid-debug', function() {
             "module/languages" + jsExt
          ],
          css: [
-            "lib/ionic/css/ionic.min.css?v=" + version,
-            "lib/markdown/css/bootstrap.min.css?v=" + version
-            // "lib/ionic/css/ionic.radio.css?v=" + version,
-            // "lib/timeline/timeline.css?v=" + version,
-            // "lib/mfb/mfb.css?v=" + version,
-            // "lib/wechat/css/weui.min.css?v=" + version,
-            // "component/css/rt.xmobile.css?v=" + version
+            "lib/ionic/css/ionic.min.css",
+            "lib/markdown/css/bootstrap.min.css"
+            // "lib/ionic/css/ionic.radio.css",
+            // "lib/timeline/timeline.css",
+            // "lib/mfb/mfb.css",
+            // "lib/wechat/css/weui.min.css",
+            // "component/css/rt.xmobile.css"
          ]
       })).pipe(gulp.dest(destFolder + '/'));
 });

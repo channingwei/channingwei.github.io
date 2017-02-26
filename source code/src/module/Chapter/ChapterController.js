@@ -19,7 +19,7 @@
       function loadBlogList(){
          ChapterService.getTheList($stateParams.id).success(function(data){
             $scope.data = data;
-            require(['lib/markdown/js/markdown'], function(params) {
+            require(['lib/markdown/js/markdown.min'], function(params) {
                var html = markdown.toHTML(data.body);
                document.getElementById("plat").innerHTML = html;
             });
