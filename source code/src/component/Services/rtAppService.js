@@ -5,7 +5,7 @@
 (function() {
     'use strict';
     angular.module('ckApp')
-        .service('rtApp', ['$http', 'rtUtils', 'rtRestClient', 'rtWechat', '$ionicHistory', function($http, rtUtils, rtRestClient, rtWechat, $ionicHistory) {
+        .service('rtApp', ['$http', 'rtUtils', 'rtRestClient', '$ionicHistory', function($http, rtUtils, rtRestClient, $ionicHistory) {
             /**
              * 返回
              */

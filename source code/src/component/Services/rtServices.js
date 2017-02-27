@@ -4,9 +4,9 @@
 (function() {
     'use strict';
     angular.module('ckApp')
-        .service('rt', ['rtLibs', 'rtMd5', 'rtCalandar', 'rtUtils', 'rtRestClient', 'rtWechat', 'rtApp', 'rtData', 'rtFile',
-            function(rtLibs, rtMd5, rtCalandar, rtUtils, rtRestClient, rtWechat, rtApp, rtData, rtFile) {
-                _.extend(this, rtLibs, rtMd5, rtCalandar, rtUtils, rtRestClient, rtWechat, rtApp, rtData, rtFile);
+        .service('rt', ['rtLibs', 'rtMd5', 'rtCalandar', 'rtUtils', 'rtRestClient', 'rtApp', 'rtData', 'rtFile',
+            function(rtLibs, rtMd5, rtCalandar, rtUtils, rtRestClient, rtApp, rtData, rtFile) {
+                _.extend(this, rtLibs, rtMd5, rtCalandar, rtUtils, rtRestClient, rtApp, rtData, rtFile);
             }
         ])
         .service('kuo', ['rt',

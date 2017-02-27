@@ -233,8 +233,8 @@ gulp.task('bulid-debug', function() {
          js: [
             "lib/lodash/js/lodash.min.js",
             "lib/moment-2.10.6/moment-with-locales.min.js",
-            "lib/wechat/js/jweixin-1.2.0.js",
-            "lib/aliyun-oss/aliyun-oss-sdk-4.4.4.min.js",
+            // "lib/wechat/js/jweixin-1.2.0.js",
+            // "lib/aliyun-oss/aliyun-oss-sdk-4.4.4.min.js",
             "lib/ionic/js/ionic.bundle.min.js",
             "lib/angular/js/angular-translate.min.js",
             "lib/angular/js/angular-scrollto.js",
@@ -246,7 +246,7 @@ gulp.task('bulid-debug', function() {
 
             "component/js/rt.xmobile.app" + jsExt,
             "component/js/rt.xmobile" + jsExt,
-            "component/js/rt.xmobile.language" + jsExt,
+            // "component/js/rt.xmobile.language" + jsExt,
 
             "app/modules" + jsExt,
             // "app/services" + jsExt,
