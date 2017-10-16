@@ -1,80 +1,21 @@
-<!doctype html>
-<html lang="zh" class="html-index">
-<head>
-	<title>GitHub Blog</title>
-	<meta charset="UTF-8">
-	<link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
-	<!--css-->
-	<link rel="stylesheet" type="text/css" href="resource/css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="resource/css/default.css">
-	<link rel="stylesheet" type="text/css" href="resource/fonts/font-awesome-4.3.0/css/font-awesome.min.css" />
-	<link rel="stylesheet" type="text/css" href="resource/css/bana.css">
-</head>
-<body>
-	<!--Hello World-->
-	<div id="helloworld" class="hello-world">Hello World</div>
-	<!--Background-->
-	<div class="background">
-		<div class="slider"></div>
-		<ul class="nav"></ul>
-		<div data-target='right' class="side-nav side-nav--right"></div>
-		<div data-target='left' class="side-nav side-nav--left"></div>
-	</div>
-	<!--canvas water flow-->
-	<div id="layer" class="canvas-water-flow">
-		<div class="htmleaf-container">
-			<div class="htmleaf-content bgcolor-8">
-				<canvas id="c"></canvas>
-				<div id="info"><div id="top"><a id="close" href=""></a></div></div>
-			</div>
-		</div>
-	</div>
-	<!--GitHub star watch fork-->
-	<!-- <iframe id="star" class="git-star" src="https://ghbtns.com/github-btn.html?user=channingwei&repo=channingwei.github.io&type=star&count=true"
-				frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
-	<iframe id="watch" class="git-watch" src="https://ghbtns.com/github-btn.html?user=channingwei&repo=channingwei.github.io&type=watch&count=true&v=2"
-				frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
-	<iframe id="fork" class="git-fork" src="https://ghbtns.com/github-btn.html?user=channingwei&repo=channingwei.github.io&type=fork&count=true"
-				frameborder="0" scrolling="0" width="170px" height="20px"></iframe> -->
-	<!--Button animation-->
-	<div class="content index-buttons">
-		<div class="share">
-			<button class="share-toggle-button"><i class="share-icon fa fa-circle"></i></button>
-			<ul class="share-items">
-				<li class="share-item">
-					<a href="https://github.com/channingwei/channingwei.github.io" target="_blank" rel="friend" class="share-button">
-						<i class="share-icon fa fa-github"></i>
-					</a>
-				</li>
-				<li class="share-item">
-					<a id="reset" class="share-button" style="cursor: pointer;">
-						<i class="share-icon fa fa-refresh"></i>
-					</a>
-				</li>
-				<li class="share-item">
-					<a href="#" class="share-button">
-						<i class="share-icon fa fa-download"></i>
-					</a>
-				</li>
-				<li class="share-item">
-					<a href="HomePage.html" class="share-button">
-						<i class="share-icon fa fa-superscript"></i>
-					</a>
-				</li>
-			</ul>
-		</div>
-	</div>
-	<!--script-->
-	<script src="resource/js/water.flow.js" type="text/javascript"></script>
-	<script src="resource/js/jquery.min.js"></script>
-	<script src="resource/js/tweenmax.min.js"></script>
-	<script src="resource/js/button.animation.js"></script>
-	<script src="resource/js/bana.js"></script>
-	<script type="text/javascript">
-		document.getElementById('layer').style.top = (document.documentElement.clientHeight - 606 * document.documentElement.clientHeight / 804) / 2 + "px";
-		document.getElementById('layer').style.left = 100 + "px";
-		document.getElementById('helloworld').style.height = (document.documentElement.clientHeight - 606 * document.documentElement.clientHeight / 804) / 2 + "px";
-		document.getElementById('helloworld').style.lineHeight = (document.documentElement.clientHeight - 606 * document.documentElement.clientHeight / 804) / 2 + "px";
-	</script>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8" />
+        <!-- 默认的markdown css  -->
+        <link rel="stylesheet" type="text/css" href="./style.css" />
+        
+		<title>Kuo</title>
+	</head>
+<body style="margin: 0;">
+    <div style="display: flex;height: 100%;">
+        <div style="width: 25%;height: 100%;background-color:beige;">Background image animation</div>
+        <div style="width: 50%;height: 100%;overflow-x: hidden;overflow-y: auto;">
+                Content item
+        </div>
+        <div style="width: 25%;height: 100%;background-color:bisque;">Background image animation</div>
+    </div>
 </body>
 </html>
+
