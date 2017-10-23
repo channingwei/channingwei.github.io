@@ -1,0 +1,24 @@
+html, body{
+    max-width: 1366px;
+    margin: 0;
+}
+.main-frame{
+    display: flex;
+    height: 100%;
+}
+.left-panel{
+    width: 20%;
+    height: 100%;
+    background-color:beige;
+}
+.middle-panel{
+    width: 60%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.rigth-panel{
+    width: 20%;
+    height: 100%;
+    background-color:bisque;
+}
