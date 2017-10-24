@@ -3,22 +3,30 @@ html, body{
     margin: 0;
 }
 .main-frame{
-    display: flex;
+    /*display: flex;*/
     height: 100%;
 }
 .left-panel{
+    float: left;
     width: 20%;
     height: 100%;
-    background-color:beige;
+    z-index: 100;
+    background-size:  cover !important;
 }
 .middle-panel{
     width: 60%;
+    left: 20%;
+    position: fixed;
     height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 1000;
 }
 .rigth-panel{
+    float: right;
     width: 20%;
     height: 100%;
-    background-color:bisque;
+    z-index: 100;
+    background-size:  cover !important;
 }
