@@ -1,12 +1,17 @@
 
-// 1、left-panel setup background image
-var imageWidth = 962;
-var documentWidth = $(document.body).width();
-var leftPanelWidth = $(".left-panel").width();
-$(".left-panel").css({'background': 'url(./images/consuegra-left.jpg) ' + -(documentWidth / 2 - leftPanelWidth) + 'px 0 no-repeat'})
-$(".rigth-panel").css({'background': 'url(./images/consuegra-right.jpg) 0 0 no-repeat'})
 
-setInterval(function(){
-    // TODO change background
+$(".middle-panel")[0].onmouseenter = function(event) {
+    $(".left-panel").css({'filter': 'blur(1px)'})
+    $(".rigth-panel").css({'filter': 'blur(1px)'})
 
-}, 1000);
+    $(".left-panel").css({'width': '50%', 'transition': '2s'})
+    $(".rigth-panel").css({'width': '50%', 'transition': '2s'})
+
+    $(".middle-panel")[0].onmouseout = function(event) {
+        $(".left-panel").css({'filter': 'blur(5px)'})
+        $(".rigth-panel").css({'filter': 'blur(5px)'})
+
+        $(".left-panel").css({'width': '20%', 'transition': '2s'})
+        $(".rigth-panel").css({'width': '20%', 'transition': '2s'})
+    }
+}
