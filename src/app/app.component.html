@@ -1,7 +1,18 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<div class="home-page">
+  <!-- TODO 页面加载时飞入效果 -->
+  <div class="top">
+    <div [@wordFlyIn]="word.trigger" *ngFor="let word of words;let iterator = index;" [id]="iterator">
+      {{ word.char }}
+    </div>
+  </div>
+  <!-- TODO 鼠标移到上面的渐变动画 -->
+  <div class="underline"></div>
+  <!-- TODO 获取最新三篇文章展示在首页 -->
+  <div class="top-three">
+    <div *ngFor="let paper of topThreePapers">
+      {{ paper.title }}
+    </div>
+  </div>
+  <!-- TODO 鼠标移到上面的渐变动画 -->
+  <div class="look-more">查看更多</div>
 </div>
