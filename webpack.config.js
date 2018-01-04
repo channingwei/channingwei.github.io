@@ -399,7 +399,7 @@ module.exports = {
       }
     ], {
       "ignore": [
-        // ".gitkeep",
+        ".gitkeep",
         "**/.DS_Store",
         "**/Thumbs.db"
       ],
