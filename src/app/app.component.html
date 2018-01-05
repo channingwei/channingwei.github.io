@@ -1,7 +1,7 @@
 <div class="home-page">
   <!-- TODO 页面加载时飞入效果 -->
-  <div class="top">
-    <div [@wordFlyIn]="word.trigger" *ngFor="let word of words;let iterator = index;" [id]="iterator">
+  <div class="top" id="top">
+    <div [@wordFlyIn]="word.trigger" (@wordFlyIn.done)="animationDone($event, iterator)" *ngFor="let word of words;let iterator = index;" [id]="iterator">
       {{ word.char }}
     </div>
   </div>

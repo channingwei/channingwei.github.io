@@ -19,74 +19,76 @@ import { trigger, keyframes, state, style, animate, transition } from '@angular/
       state('word-u', style({ transform: 'translateX(0)' })),
       state('word-o', style({ transform: 'translateX(0)' })),
       transition('void => word-c', [
-        animate(5000, keyframes([
+        animate(1000, keyframes([
           style({ opacity: 0, transform: 'translateX(-500%)', offset: 0 }),
           style({ opacity: 1, transform: 'translateX(0)', offset: 1 })
         ]))
       ]),
       transition('void => word-h', [
-        animate(5000, keyframes([
+        animate(1000, keyframes([
           style({ opacity: 0, transform: 'translateX(-500%) translateY(-200%)', offset: 0 }),
           style({ opacity: 1, transform: 'translateX(0)  translateY(0)', offset: 1 })
         ]))
       ]),
       transition('void => word-a', [
-        animate(5000, keyframes([
+        animate(1000, keyframes([
           style({ opacity: 0, transform: 'translateX(-450%) translateY(-200%)', offset: 0 }),
           style({ opacity: 1, transform: 'translateX(0) translateY(0)', offset: 1 })
         ]))
       ]),
       transition('void => word-n-0', [
-        animate(5000, keyframes([
+        animate(1000, keyframes([
           style({ opacity: 0, transform: 'translateX(-400%) translateY(-200%)', offset: 0 }),
           style({ opacity: 1, transform: 'translateX(0) translateY(0)', offset: 1 })
         ]))
       ]),
       transition('void => word-n-1', [
-        animate(5000, keyframes([
+        animate(1000, keyframes([
           style({ opacity: 0, transform: 'translateX(0) translateY(-200%)', offset: 0 }),
           style({ opacity: 1, transform: 'translateX(0) translateY(0)', offset: 1 })
         ]))
       ]),
       transition('void => word-i', [
-        animate(5000, keyframes([
+        animate(1000, keyframes([
           style({ opacity: 0, transform: 'translateX(100%) translateY(-200%)', offset: 0 }),
           style({ opacity: 1, transform: 'translateX(0) translateY(0)', offset: 1 })
         ]))
       ]),
       transition('void => word-n-2', [
-        animate(5000, keyframes([
+        animate(1000, keyframes([
           style({ opacity: 0, transform: 'translateX(100%) translateY(-200%)', offset: 0 }),
           style({ opacity: 1, transform: 'translateX(0) translateY(0)', offset: 1 })
         ]))
       ]),
       transition('void => word-g', [
-        animate(6250, keyframes([
+        animate(2500, keyframes([
           style({ opacity: 0, transform: 'translateX(350%) translateY(-200%)', offset: 0 }),
-          style({ opacity: 1, transform: 'translateX(0) translateY(0)', offset: 0.8 }),
-          style({ opacity: 1, transform: 'rotate(-20deg)', offset: 0.9 }),
+          style({ opacity: 1, transform: 'translateX(0) translateY(0)', offset: 0.4 }),
+          style({ opacity: 1, transform: 'rotate(-20deg)', offset: 0.6 }),
+          style({ opacity: 1, transform: 'rotate(0deg)', offset: 0.8 }),
+          style({ opacity: 1, transform: 'rotate(10deg)', offset: 0.9 }),
           style({ opacity: 1, transform: 'rotate(0deg)', offset: 1 })
         ]))
       ]),
       transition('void => word-k', [
-        animate(6250, keyframes([
+        animate(2000, keyframes([
           style({ opacity: 0, transform: 'translateX(350%) translateY(-200%)', offset: 0 }),
-          style({ opacity: 1, transform: 'translateX(0) translateY(0)', offset: 0.8 }),
+          style({ opacity: 1, transform: 'translateX(0) translateY(0)', offset: 0.5 }),
           style({ opacity: 0, transform: 'translateX(3500%) translateY(-2000%)', offset: 1 })
         ]))
       ]),
       transition('void => word-u', [
-        animate(6250, keyframes([
+        animate(2000, keyframes([
           style({ opacity: 0, transform: 'translateX(400%) translateY(-200%)', offset: 0 }),
-          style({ opacity: 1, transform: 'translateX(0) translateY(0)', offset: 0.8 }),
-          style({ opacity: 0, transform: 'translateX(0) translateY(0)', offset: 1 })
+          style({ opacity: 1, transform: 'translateX(0) translateY(0)', offset: 0.5 }),
+          style({ opacity: 0, transform: 'translateX(3500%) translateY(-2000%)', offset: 1 })
         ]))
       ]),
       transition('void => word-o', [
-        animate(6250, keyframes([
+        animate(2000, keyframes([
           style({ opacity: 0, transform: 'translateX(500%)', offset: 0 }),
-          style({ opacity: 1, transform: 'translateX(0)', offset: 0.8 }),
-          style({ opacity: 0, transform: 'translateX(0) translateY(0)', offset: 1 })
+          style({ opacity: 1, transform: 'translateX(0)', offset: 0.5 }),
+          style({ opacity: 0, transform: 'translateX(3500%) translateY(-2000%)', offset: 1 })
         ]))
       ])
     ])
@@ -98,6 +100,27 @@ export class AppComponent {
 
   constructor() {
 
+  }
+
+  /**
+   * 删除'K'、'u'、'o'
+   * @param {any} event
+   * @param {any} index
+   * @memberof AppComponent
+   */
+  animationDone(event, index) {
+    if (event.toState === 'word-k' || event.toState === 'word-u' || event.toState === 'word-o') {
+      event.element.remove();
+    }
+    // 减少angular自动渲染DOM带来的元素移动的突兀性
+    if (event.toState === 'word-k') {
+      setTimeout(() => {
+        document.getElementById('top').style.transform = 'translateX(-200px)';
+      }, 50);
+      setTimeout(() => {
+        document.getElementById('top').style.transform = 'translateX(0)';
+      }, 100);
+    }
   }
 
 }
