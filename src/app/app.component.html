@@ -1,16 +1,20 @@
 <div class="home-page">
-  <!-- TODO 页面加载时飞入效果 -->
-  <div class="top" id="top">
-    <div [@wordFlyIn]="word.trigger" (@wordFlyIn.done)="animationDone($event, iterator)" *ngFor="let word of words;let iterator = index;" [id]="iterator">
-      {{ word.char }}
+  <div>
+    <div class="top" id="top">
+      <div [@wordFlyIn]="word.trigger" (@wordFlyIn.done)="animationDone($event, iterator)" *ngFor="let word of words;let iterator = index;"
+        [id]="iterator">
+        {{ word.char }}
+      </div>
     </div>
-  </div>
-  <!-- TODO 鼠标移到上面的渐变动画 -->
-  <div class="underline"></div>
-  <!-- TODO 获取最新三篇文章展示在首页 -->
-  <div class="top-three">
-    <div *ngFor="let paper of topThreePapers">
-      {{ paper.title }}
+    <!-- TODO 鼠标移到上面的渐变动画 -->
+    <div class="underline"></div>
+    <!-- TODO 获取最新三篇文章展示在首页 -->
+    <div class="top-three">
+      <div *ngFor="let paper of topThreePapers" class="top-page">
+        <div class="page-icon"><img src="static/assets/img/test.png" /></div>
+        <div class="page-title">{{ paper.title }}</div>
+        <div class="page-abstract">{{ paper.abstract }}</div>
+      </div>
     </div>
   </div>
   <!-- TODO 鼠标移到上面的渐变动画 -->

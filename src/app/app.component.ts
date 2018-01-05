@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
+import { PageService } from './app.service';
 import { trigger, keyframes, state, style, animate, transition } from '@angular/animations';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
+  providers: [PageService],
   animations: [
     trigger('wordFlyIn', [
       state('word-c', style({ transform: 'translateX(0)' })),
@@ -91,15 +93,20 @@ import { trigger, keyframes, state, style, animate, transition } from '@angular/
           style({ opacity: 0, transform: 'translateX(3500%) translateY(-2000%)', offset: 1 })
         ]))
       ])
-    ])
+    ]),
+    trigger('hover', [])
   ]
 })
 export class AppComponent {
   words = [{ char: 'C', trigger: 'word-c' }, { char: 'h', trigger: 'word-h' }, { char: 'a', trigger: 'word-a' }, { char: 'n', trigger: 'word-n-0' }, { char: 'n', trigger: 'word-n-1' }, { char: 'i', trigger: 'word-i' }, { char: 'n', trigger: 'word-n-2' }, { char: 'g', trigger: 'word-g' }, { char: 'K', trigger: 'word-k' }, { char: 'u', trigger: 'word-u' }, { char: 'o', trigger: 'word-o' }];
   topThreePapers = [];
 
-  constructor() {
-
+  constructor(private pageService: PageService) {
+    pageService.topThreePages().then(res => {
+      this.topThreePapers = res.json().pages;
+    }).catch(err => {
+      console.log(err);
+    });
   }
 
   /**
@@ -113,14 +120,14 @@ export class AppComponent {
       event.element.remove();
     }
     // 减少angular自动渲染DOM带来的元素移动的突兀性
-    if (event.toState === 'word-k') {
-      setTimeout(() => {
-        document.getElementById('top').style.transform = 'translateX(-200px)';
-      }, 50);
-      setTimeout(() => {
-        document.getElementById('top').style.transform = 'translateX(0)';
-      }, 100);
-    }
+    // if (event.toState === 'word-k') {
+    //   setTimeout(() => {
+    //     document.getElementById('top').style.transform = 'translateX(-200px)';
+    //   }, 50);
+    //   setTimeout(() => {
+    //     document.getElementById('top').style.transform = 'translateX(0)';
+    //   }, 300);
+    // }
   }
 
 }

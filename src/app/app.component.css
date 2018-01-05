@@ -16,16 +16,14 @@
     color: #ac9455;
     font-family: kuoFont;
     display: flex;
+    display: -webkit-flex;
     justify-content: center;
+    -webkit-justify-content: center;
     font-family: kuoFont;
-    /* opacity: 0.8; */
 }
 div.top div {
     font-family: kuoFont;
 }
-/* .top:hover {
-    opacity: 1;
-} */
 .underline {
     height: 2px;
     width: 60px;
@@ -33,6 +31,48 @@ div.top div {
     margin-top: 50px;
     background-color: #767676;
 }
+.top-three {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    -webkit-justify-content: center;
+}
+.top-page {
+    margin-top: 150px;
+    height: 250px;
+    width: 360px;
+    background-color: transparent;
+    cursor: pointer;
+}
+div.top-page:hover {
+    background-color: rgb(72, 188, 255, 0.05) !important;
+}
+div.top-page + div.top-page {
+    margin-left: 60px;
+}
+.page-icon {
+    text-align: center;
+}
+.page-title {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 18px;
+    font-family: SimHei;
+}
+.page-abstract {
+    text-align: center;
+    font-size: 14px;
+    font-family: SimHei;
+    color: #767676;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
 .look-more {
     position: fixed;
     bottom: 30px;
