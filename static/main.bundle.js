@@ -25,7 +25,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, ".home-page {\n    width: 100%;\n\theight: 100%;\n    background-color: #202020;\n}\n.switch-button {\n    position: fixed;\n    top: 20px;\n    left: 20px;\n    z-index: 10;\n}\n.top {\n    padding-top: 120px;\n    font-size: 100px;\n    text-align: center;\n    color: #ac9455;\n    font-family: kuoFont;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    font-family: kuoFont;\n    /* opacity: 0.8; */\n}\ndiv.top div {\n    font-family: kuoFont;\n}\n/* .top:hover {\n    opacity: 1;\n} */\n.underline {\n    height: 2px;\n    width: 60px;\n    margin: auto;\n    margin-top: 50px;\n    background-color: #767676;\n}\n.look-more {\n    position: fixed;\n    bottom: 30px;\n    width: 100%;\n    text-align: center;\n    font-size: 14px;\n    color: #767676;\n}", ""]);
+exports.push([module.i, ".home-page {\r\n    width: 100%;\r\n\theight: 100%;\r\n    background-color: #202020;\r\n}\r\n.switch-button {\r\n    position: fixed;\r\n    top: 20px;\r\n    left: 20px;\r\n    z-index: 10;\r\n}\r\n.top {\r\n    padding-top: 120px;\r\n    font-size: 100px;\r\n    text-align: center;\r\n    color: #ac9455;\r\n    font-family: kuoFont;\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    display: -webkit-flex;\r\n    -webkit-box-pack: center;\r\n        -ms-flex-pack: center;\r\n            justify-content: center;\r\n    -webkit-justify-content: center;\r\n    font-family: kuoFont;\r\n}\r\ndiv.top div {\r\n    font-family: kuoFont;\r\n}\r\n.underline {\r\n    height: 2px;\r\n    width: 60px;\r\n    margin: auto;\r\n    margin-top: 50px;\r\n    background-color: #767676;\r\n}\r\n.top-three {\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    display: -webkit-flex;\r\n    -webkit-box-pack: center;\r\n        -ms-flex-pack: center;\r\n            justify-content: center;\r\n    -webkit-justify-content: center;\r\n}\r\n.top-page {\r\n    margin-top: 150px;\r\n    height: 250px;\r\n    width: 360px;\r\n    background-color: transparent;\r\n    cursor: pointer;\r\n}\r\ndiv.top-page:hover {\r\n    background-color: rgb(72, 188, 255, 0.05) !important;\r\n}\r\ndiv.top-page + div.top-page {\r\n    margin-left: 60px;\r\n}\r\n.page-icon {\r\n    text-align: center;\r\n}\r\n.page-title {\r\n    text-align: center;\r\n    margin-top: 40px;\r\n    margin-bottom: 20px;\r\n    color: #fff;\r\n    font-size: 18px;\r\n    font-family: SimHei;\r\n}\r\n.page-abstract {\r\n    text-align: center;\r\n    font-size: 14px;\r\n    font-family: SimHei;\r\n    color: #767676;\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n    display: -webkit-box;\r\n    -webkit-line-clamp: 3;\r\n    -webkit-box-orient: vertical;\r\n}\r\n\r\n.look-more {\r\n    position: fixed;\r\n    bottom: 30px;\r\n    width: 100%;\r\n    text-align: center;\r\n    font-size: 14px;\r\n    color: #767676;\r\n}", ""]);
 
 // exports
 
@@ -38,7 +38,7 @@ module.exports = module.exports.toString();
 /***/ "./src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"home-page\">\n  <!-- TODO 页面加载时飞入效果 -->\n  <div class=\"top\" id=\"top\">\n    <div [@wordFlyIn]=\"word.trigger\" (@wordFlyIn.done)=\"animationDone($event, iterator)\" *ngFor=\"let word of words;let iterator = index;\" [id]=\"iterator\">\n      {{ word.char }}\n    </div>\n  </div>\n  <!-- TODO 鼠标移到上面的渐变动画 -->\n  <div class=\"underline\"></div>\n  <!-- TODO 获取最新三篇文章展示在首页 -->\n  <div class=\"top-three\">\n    <div *ngFor=\"let paper of topThreePapers\">\n      {{ paper.title }}\n    </div>\n  </div>\n  <!-- TODO 鼠标移到上面的渐变动画 -->\n  <div class=\"look-more\">查看更多</div>\n</div>"
+module.exports = "<div class=\"home-page\">\r\n  <div>\r\n    <div class=\"top\" id=\"top\">\r\n      <div [@wordFlyIn]=\"word.trigger\" (@wordFlyIn.done)=\"animationDone($event, iterator)\" *ngFor=\"let word of words;let iterator = index;\"\r\n        [id]=\"iterator\">\r\n        {{ word.char }}\r\n      </div>\r\n    </div>\r\n    <!-- TODO 鼠标移到上面的渐变动画 -->\r\n    <div class=\"underline\"></div>\r\n    <!-- TODO 获取最新三篇文章展示在首页 -->\r\n    <div class=\"top-three\">\r\n      <div *ngFor=\"let paper of topThreePapers\" class=\"top-page\">\r\n        <div class=\"page-icon\"><img src=\"static/assets/img/test.png\" /></div>\r\n        <div class=\"page-title\">{{ paper.title }}</div>\r\n        <div class=\"page-abstract\">{{ paper.abstract }}</div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <!-- TODO 鼠标移到上面的渐变动画 -->\r\n  <div class=\"look-more\">查看更多</div>\r\n</div>"
 
 /***/ }),
 
@@ -48,7 +48,8 @@ module.exports = "<div class=\"home-page\">\n  <!-- TODO 页面加载时飞入�
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_animations__ = __webpack_require__("./node_modules/@angular/animations/esm5/animations.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_service__ = __webpack_require__("./src/app/app.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_animations__ = __webpack_require__("./node_modules/@angular/animations/esm5/animations.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -60,10 +61,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var AppComponent = (function () {
-    function AppComponent() {
+    function AppComponent(pageService) {
+        var _this = this;
+        this.pageService = pageService;
         this.words = [{ char: 'C', trigger: 'word-c' }, { char: 'h', trigger: 'word-h' }, { char: 'a', trigger: 'word-a' }, { char: 'n', trigger: 'word-n-0' }, { char: 'n', trigger: 'word-n-1' }, { char: 'i', trigger: 'word-i' }, { char: 'n', trigger: 'word-n-2' }, { char: 'g', trigger: 'word-g' }, { char: 'K', trigger: 'word-k' }, { char: 'u', trigger: 'word-u' }, { char: 'o', trigger: 'word-o' }];
         this.topThreePapers = [];
+        pageService.topThreePages().then(function (res) {
+            _this.topThreePapers = res.json().pages;
+        }).catch(function (err) {
+            console.log(err);
+        });
     }
     /**
      * 删除'K'、'u'、'o'
@@ -75,110 +84,113 @@ var AppComponent = (function () {
         if (event.toState === 'word-k' || event.toState === 'word-u' || event.toState === 'word-o') {
             event.element.remove();
         }
-        if (event.toState === 'word-k') {
-            setTimeout(function () {
-                document.getElementById('top').style.transform = 'translateX(-200px)';
-            }, 50);
-            setTimeout(function () {
-                document.getElementById('top').style.transform = 'translateX(0)';
-            }, 100);
-        }
+        // 减少angular自动渲染DOM带来的元素移动的突兀性
+        // if (event.toState === 'word-k') {
+        //   setTimeout(() => {
+        //     document.getElementById('top').style.transform = 'translateX(-200px)';
+        //   }, 50);
+        //   setTimeout(() => {
+        //     document.getElementById('top').style.transform = 'translateX(0)';
+        //   }, 300);
+        // }
     };
     AppComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'app-root',
             template: __webpack_require__("./src/app/app.component.html"),
             styles: [__webpack_require__("./src/app/app.component.css")],
+            providers: [__WEBPACK_IMPORTED_MODULE_1__app_service__["a" /* PageService */]],
             animations: [
-                Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["k" /* trigger */])('wordFlyIn', [
-                    Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["h" /* state */])('word-c', Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ transform: 'translateX(0)' })),
-                    Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["h" /* state */])('word-h', Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ transform: 'translateX(0)' })),
-                    Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["h" /* state */])('word-a', Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ transform: 'translateX(0)' })),
-                    Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["h" /* state */])('word-n-0', Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ transform: 'translateX(0)' })),
-                    Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["h" /* state */])('word-n-1', Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ transform: 'translateX(0)' })),
-                    Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["h" /* state */])('word-i', Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ transform: 'translateX(0)' })),
-                    Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["h" /* state */])('word-n-2', Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ transform: 'translateX(0)' })),
-                    Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["h" /* state */])('word-g', Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ transform: 'translateX(0)' })),
-                    Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["h" /* state */])('word-k', Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ transform: 'translateX(0)' })),
-                    Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["h" /* state */])('word-u', Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ transform: 'translateX(0)' })),
-                    Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["h" /* state */])('word-o', Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ transform: 'translateX(0)' })),
-                    Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["j" /* transition */])('void => word-c', [
-                        Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["e" /* animate */])(1000, Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["f" /* keyframes */])([
-                            Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 0, transform: 'translateX(-500%)', offset: 0 }),
-                            Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 1, transform: 'translateX(0)', offset: 1 })
+                Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["k" /* trigger */])('wordFlyIn', [
+                    Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["h" /* state */])('word-c', Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["i" /* style */])({ transform: 'translateX(0)' })),
+                    Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["h" /* state */])('word-h', Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["i" /* style */])({ transform: 'translateX(0)' })),
+                    Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["h" /* state */])('word-a', Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["i" /* style */])({ transform: 'translateX(0)' })),
+                    Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["h" /* state */])('word-n-0', Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["i" /* style */])({ transform: 'translateX(0)' })),
+                    Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["h" /* state */])('word-n-1', Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["i" /* style */])({ transform: 'translateX(0)' })),
+                    Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["h" /* state */])('word-i', Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["i" /* style */])({ transform: 'translateX(0)' })),
+                    Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["h" /* state */])('word-n-2', Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["i" /* style */])({ transform: 'translateX(0)' })),
+                    Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["h" /* state */])('word-g', Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["i" /* style */])({ transform: 'translateX(0)' })),
+                    Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["h" /* state */])('word-k', Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["i" /* style */])({ transform: 'translateX(0)' })),
+                    Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["h" /* state */])('word-u', Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["i" /* style */])({ transform: 'translateX(0)' })),
+                    Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["h" /* state */])('word-o', Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["i" /* style */])({ transform: 'translateX(0)' })),
+                    Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["j" /* transition */])('void => word-c', [
+                        Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["e" /* animate */])(1000, Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["f" /* keyframes */])([
+                            Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["i" /* style */])({ opacity: 0, transform: 'translateX(-500%)', offset: 0 }),
+                            Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["i" /* style */])({ opacity: 1, transform: 'translateX(0)', offset: 1 })
                         ]))
                     ]),
-                    Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["j" /* transition */])('void => word-h', [
-                        Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["e" /* animate */])(1000, Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["f" /* keyframes */])([
-                            Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 0, transform: 'translateX(-500%) translateY(-200%)', offset: 0 }),
-                            Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 1, transform: 'translateX(0)  translateY(0)', offset: 1 })
+                    Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["j" /* transition */])('void => word-h', [
+                        Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["e" /* animate */])(1000, Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["f" /* keyframes */])([
+                            Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["i" /* style */])({ opacity: 0, transform: 'translateX(-500%) translateY(-200%)', offset: 0 }),
+                            Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["i" /* style */])({ opacity: 1, transform: 'translateX(0)  translateY(0)', offset: 1 })
                         ]))
                     ]),
-                    Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["j" /* transition */])('void => word-a', [
-                        Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["e" /* animate */])(1000, Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["f" /* keyframes */])([
-                            Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 0, transform: 'translateX(-450%) translateY(-200%)', offset: 0 }),
-                            Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 1, transform: 'translateX(0) translateY(0)', offset: 1 })
+                    Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["j" /* transition */])('void => word-a', [
+                        Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["e" /* animate */])(1000, Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["f" /* keyframes */])([
+                            Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["i" /* style */])({ opacity: 0, transform: 'translateX(-450%) translateY(-200%)', offset: 0 }),
+                            Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["i" /* style */])({ opacity: 1, transform: 'translateX(0) translateY(0)', offset: 1 })
                         ]))
                     ]),
-                    Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["j" /* transition */])('void => word-n-0', [
-                        Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["e" /* animate */])(1000, Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["f" /* keyframes */])([
-                            Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 0, transform: 'translateX(-400%) translateY(-200%)', offset: 0 }),
-                            Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 1, transform: 'translateX(0) translateY(0)', offset: 1 })
+                    Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["j" /* transition */])('void => word-n-0', [
+                        Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["e" /* animate */])(1000, Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["f" /* keyframes */])([
+                            Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["i" /* style */])({ opacity: 0, transform: 'translateX(-400%) translateY(-200%)', offset: 0 }),
+                            Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["i" /* style */])({ opacity: 1, transform: 'translateX(0) translateY(0)', offset: 1 })
                         ]))
                     ]),
-                    Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["j" /* transition */])('void => word-n-1', [
-                        Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["e" /* animate */])(1000, Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["f" /* keyframes */])([
-                            Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 0, transform: 'translateX(0) translateY(-200%)', offset: 0 }),
-                            Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 1, transform: 'translateX(0) translateY(0)', offset: 1 })
+                    Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["j" /* transition */])('void => word-n-1', [
+                        Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["e" /* animate */])(1000, Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["f" /* keyframes */])([
+                            Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["i" /* style */])({ opacity: 0, transform: 'translateX(0) translateY(-200%)', offset: 0 }),
+                            Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["i" /* style */])({ opacity: 1, transform: 'translateX(0) translateY(0)', offset: 1 })
                         ]))
                     ]),
-                    Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["j" /* transition */])('void => word-i', [
-                        Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["e" /* animate */])(1000, Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["f" /* keyframes */])([
-                            Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 0, transform: 'translateX(100%) translateY(-200%)', offset: 0 }),
-                            Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 1, transform: 'translateX(0) translateY(0)', offset: 1 })
+                    Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["j" /* transition */])('void => word-i', [
+                        Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["e" /* animate */])(1000, Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["f" /* keyframes */])([
+                            Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["i" /* style */])({ opacity: 0, transform: 'translateX(100%) translateY(-200%)', offset: 0 }),
+                            Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["i" /* style */])({ opacity: 1, transform: 'translateX(0) translateY(0)', offset: 1 })
                         ]))
                     ]),
-                    Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["j" /* transition */])('void => word-n-2', [
-                        Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["e" /* animate */])(1000, Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["f" /* keyframes */])([
-                            Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 0, transform: 'translateX(100%) translateY(-200%)', offset: 0 }),
-                            Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 1, transform: 'translateX(0) translateY(0)', offset: 1 })
+                    Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["j" /* transition */])('void => word-n-2', [
+                        Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["e" /* animate */])(1000, Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["f" /* keyframes */])([
+                            Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["i" /* style */])({ opacity: 0, transform: 'translateX(100%) translateY(-200%)', offset: 0 }),
+                            Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["i" /* style */])({ opacity: 1, transform: 'translateX(0) translateY(0)', offset: 1 })
                         ]))
                     ]),
-                    Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["j" /* transition */])('void => word-g', [
-                        Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["e" /* animate */])(2500, Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["f" /* keyframes */])([
-                            Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 0, transform: 'translateX(350%) translateY(-200%)', offset: 0 }),
-                            Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 1, transform: 'translateX(0) translateY(0)', offset: 0.4 }),
-                            Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 1, transform: 'rotate(-20deg)', offset: 0.6 }),
-                            Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 1, transform: 'rotate(0deg)', offset: 0.8 }),
-                            Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 1, transform: 'rotate(10deg)', offset: 0.9 }),
-                            Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 1, transform: 'rotate(0deg)', offset: 1 })
+                    Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["j" /* transition */])('void => word-g', [
+                        Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["e" /* animate */])(2500, Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["f" /* keyframes */])([
+                            Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["i" /* style */])({ opacity: 0, transform: 'translateX(350%) translateY(-200%)', offset: 0 }),
+                            Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["i" /* style */])({ opacity: 1, transform: 'translateX(0) translateY(0)', offset: 0.4 }),
+                            Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["i" /* style */])({ opacity: 1, transform: 'rotate(-20deg)', offset: 0.6 }),
+                            Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["i" /* style */])({ opacity: 1, transform: 'rotate(0deg)', offset: 0.8 }),
+                            Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["i" /* style */])({ opacity: 1, transform: 'rotate(10deg)', offset: 0.9 }),
+                            Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["i" /* style */])({ opacity: 1, transform: 'rotate(0deg)', offset: 1 })
                         ]))
                     ]),
-                    Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["j" /* transition */])('void => word-k', [
-                        Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["e" /* animate */])(2000, Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["f" /* keyframes */])([
-                            Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 0, transform: 'translateX(350%) translateY(-200%)', offset: 0 }),
-                            Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 1, transform: 'translateX(0) translateY(0)', offset: 0.5 }),
-                            Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 0, transform: 'translateX(3500%) translateY(-2000%)', offset: 1 })
+                    Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["j" /* transition */])('void => word-k', [
+                        Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["e" /* animate */])(2000, Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["f" /* keyframes */])([
+                            Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["i" /* style */])({ opacity: 0, transform: 'translateX(350%) translateY(-200%)', offset: 0 }),
+                            Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["i" /* style */])({ opacity: 1, transform: 'translateX(0) translateY(0)', offset: 0.5 }),
+                            Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["i" /* style */])({ opacity: 0, transform: 'translateX(3500%) translateY(-2000%)', offset: 1 })
                         ]))
                     ]),
-                    Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["j" /* transition */])('void => word-u', [
-                        Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["e" /* animate */])(2000, Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["f" /* keyframes */])([
-                            Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 0, transform: 'translateX(400%) translateY(-200%)', offset: 0 }),
-                            Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 1, transform: 'translateX(0) translateY(0)', offset: 0.5 }),
-                            Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 0, transform: 'translateX(3500%) translateY(-2000%)', offset: 1 })
+                    Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["j" /* transition */])('void => word-u', [
+                        Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["e" /* animate */])(2000, Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["f" /* keyframes */])([
+                            Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["i" /* style */])({ opacity: 0, transform: 'translateX(400%) translateY(-200%)', offset: 0 }),
+                            Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["i" /* style */])({ opacity: 1, transform: 'translateX(0) translateY(0)', offset: 0.5 }),
+                            Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["i" /* style */])({ opacity: 0, transform: 'translateX(3500%) translateY(-2000%)', offset: 1 })
                         ]))
                     ]),
-                    Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["j" /* transition */])('void => word-o', [
-                        Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["e" /* animate */])(2000, Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["f" /* keyframes */])([
-                            Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 0, transform: 'translateX(500%)', offset: 0 }),
-                            Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 1, transform: 'translateX(0)', offset: 0.5 }),
-                            Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 0, transform: 'translateX(3500%) translateY(-2000%)', offset: 1 })
+                    Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["j" /* transition */])('void => word-o', [
+                        Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["e" /* animate */])(2000, Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["f" /* keyframes */])([
+                            Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["i" /* style */])({ opacity: 0, transform: 'translateX(500%)', offset: 0 }),
+                            Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["i" /* style */])({ opacity: 1, transform: 'translateX(0)', offset: 0.5 }),
+                            Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["i" /* style */])({ opacity: 0, transform: 'translateX(3500%) translateY(-2000%)', offset: 1 })
                         ]))
                     ])
-                ])
+                ]),
+                Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["k" /* trigger */])('hover', [])
             ]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__app_service__["a" /* PageService */]])
     ], AppComponent);
     return AppComponent;
 }());
@@ -195,7 +207,8 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__("./node_modules/@angular/platform-browser/esm5/platform-browser.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_animations__ = __webpack_require__("./node_modules/@angular/platform-browser/esm5/animations.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__("./src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__("./node_modules/@angular/http/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__("./src/app/app.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -206,23 +219,64 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["E" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* AppComponent */]
+                __WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */]
+                __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
+                __WEBPACK_IMPORTED_MODULE_3__angular_http__["b" /* HttpModule */]
             ],
             providers: [],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* AppComponent */]]
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
     return AppModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/app.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("./node_modules/@angular/http/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/toPromise.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var PageService = (function () {
+    function PageService(http) {
+        this.http = http;
+    }
+    PageService.prototype.topThreePages = function () {
+        return this.http.get('static/assets/pages.json').toPromise();
+    };
+    PageService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */]])
+    ], PageService);
+    return PageService;
 }());
 
 
