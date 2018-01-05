@@ -38,7 +38,7 @@ module.exports = module.exports.toString();
 /***/ "./src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"home-page\">\n  <!-- TODO 页面加载时飞入效果 -->\n  <div class=\"top\">\n    <div [@wordFlyIn]=\"word.trigger\" *ngFor=\"let word of words;let iterator = index;\" [id]=\"iterator\">\n      {{ word.char }}\n    </div>\n  </div>\n  <!-- TODO 鼠标移到上面的渐变动画 -->\n  <div class=\"underline\"></div>\n  <!-- TODO 获取最新三篇文章展示在首页 -->\n  <div class=\"top-three\">\n    <div *ngFor=\"let paper of topThreePapers\">\n      {{ paper.title }}\n    </div>\n  </div>\n  <!-- TODO 鼠标移到上面的渐变动画 -->\n  <div class=\"look-more\">查看更多</div>\n</div>"
+module.exports = "<div class=\"home-page\">\n  <!-- TODO 页面加载时飞入效果 -->\n  <div class=\"top\" id=\"top\">\n    <div [@wordFlyIn]=\"word.trigger\" (@wordFlyIn.done)=\"animationDone($event, iterator)\" *ngFor=\"let word of words;let iterator = index;\" [id]=\"iterator\">\n      {{ word.char }}\n    </div>\n  </div>\n  <!-- TODO 鼠标移到上面的渐变动画 -->\n  <div class=\"underline\"></div>\n  <!-- TODO 获取最新三篇文章展示在首页 -->\n  <div class=\"top-three\">\n    <div *ngFor=\"let paper of topThreePapers\">\n      {{ paper.title }}\n    </div>\n  </div>\n  <!-- TODO 鼠标移到上面的渐变动画 -->\n  <div class=\"look-more\">查看更多</div>\n</div>"
 
 /***/ }),
 
@@ -65,6 +65,25 @@ var AppComponent = (function () {
         this.words = [{ char: 'C', trigger: 'word-c' }, { char: 'h', trigger: 'word-h' }, { char: 'a', trigger: 'word-a' }, { char: 'n', trigger: 'word-n-0' }, { char: 'n', trigger: 'word-n-1' }, { char: 'i', trigger: 'word-i' }, { char: 'n', trigger: 'word-n-2' }, { char: 'g', trigger: 'word-g' }, { char: 'K', trigger: 'word-k' }, { char: 'u', trigger: 'word-u' }, { char: 'o', trigger: 'word-o' }];
         this.topThreePapers = [];
     }
+    /**
+     * 删除'K'、'u'、'o'
+     * @param {any} event
+     * @param {any} index
+     * @memberof AppComponent
+     */
+    AppComponent.prototype.animationDone = function (event, index) {
+        if (event.toState === 'word-k' || event.toState === 'word-u' || event.toState === 'word-o') {
+            event.element.remove();
+        }
+        if (event.toState === 'word-k') {
+            setTimeout(function () {
+                document.getElementById('top').style.transform = 'translateX(-200px)';
+            }, 50);
+            setTimeout(function () {
+                document.getElementById('top').style.transform = 'translateX(0)';
+            }, 100);
+        }
+    };
     AppComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'app-root',
@@ -84,74 +103,76 @@ var AppComponent = (function () {
                     Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["h" /* state */])('word-u', Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ transform: 'translateX(0)' })),
                     Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["h" /* state */])('word-o', Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ transform: 'translateX(0)' })),
                     Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["j" /* transition */])('void => word-c', [
-                        Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["e" /* animate */])(5000, Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["f" /* keyframes */])([
+                        Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["e" /* animate */])(1000, Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["f" /* keyframes */])([
                             Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 0, transform: 'translateX(-500%)', offset: 0 }),
                             Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 1, transform: 'translateX(0)', offset: 1 })
                         ]))
                     ]),
                     Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["j" /* transition */])('void => word-h', [
-                        Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["e" /* animate */])(5000, Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["f" /* keyframes */])([
+                        Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["e" /* animate */])(1000, Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["f" /* keyframes */])([
                             Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 0, transform: 'translateX(-500%) translateY(-200%)', offset: 0 }),
                             Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 1, transform: 'translateX(0)  translateY(0)', offset: 1 })
                         ]))
                     ]),
                     Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["j" /* transition */])('void => word-a', [
-                        Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["e" /* animate */])(5000, Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["f" /* keyframes */])([
+                        Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["e" /* animate */])(1000, Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["f" /* keyframes */])([
                             Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 0, transform: 'translateX(-450%) translateY(-200%)', offset: 0 }),
                             Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 1, transform: 'translateX(0) translateY(0)', offset: 1 })
                         ]))
                     ]),
                     Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["j" /* transition */])('void => word-n-0', [
-                        Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["e" /* animate */])(5000, Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["f" /* keyframes */])([
+                        Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["e" /* animate */])(1000, Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["f" /* keyframes */])([
                             Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 0, transform: 'translateX(-400%) translateY(-200%)', offset: 0 }),
                             Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 1, transform: 'translateX(0) translateY(0)', offset: 1 })
                         ]))
                     ]),
                     Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["j" /* transition */])('void => word-n-1', [
-                        Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["e" /* animate */])(5000, Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["f" /* keyframes */])([
+                        Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["e" /* animate */])(1000, Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["f" /* keyframes */])([
                             Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 0, transform: 'translateX(0) translateY(-200%)', offset: 0 }),
                             Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 1, transform: 'translateX(0) translateY(0)', offset: 1 })
                         ]))
                     ]),
                     Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["j" /* transition */])('void => word-i', [
-                        Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["e" /* animate */])(5000, Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["f" /* keyframes */])([
+                        Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["e" /* animate */])(1000, Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["f" /* keyframes */])([
                             Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 0, transform: 'translateX(100%) translateY(-200%)', offset: 0 }),
                             Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 1, transform: 'translateX(0) translateY(0)', offset: 1 })
                         ]))
                     ]),
                     Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["j" /* transition */])('void => word-n-2', [
-                        Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["e" /* animate */])(5000, Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["f" /* keyframes */])([
+                        Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["e" /* animate */])(1000, Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["f" /* keyframes */])([
                             Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 0, transform: 'translateX(100%) translateY(-200%)', offset: 0 }),
                             Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 1, transform: 'translateX(0) translateY(0)', offset: 1 })
                         ]))
                     ]),
                     Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["j" /* transition */])('void => word-g', [
-                        Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["e" /* animate */])(6250, Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["f" /* keyframes */])([
+                        Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["e" /* animate */])(2500, Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["f" /* keyframes */])([
                             Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 0, transform: 'translateX(350%) translateY(-200%)', offset: 0 }),
-                            Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 1, transform: 'translateX(0) translateY(0)', offset: 0.8 }),
-                            Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 1, transform: 'rotate(-20deg)', offset: 0.9 }),
+                            Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 1, transform: 'translateX(0) translateY(0)', offset: 0.4 }),
+                            Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 1, transform: 'rotate(-20deg)', offset: 0.6 }),
+                            Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 1, transform: 'rotate(0deg)', offset: 0.8 }),
+                            Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 1, transform: 'rotate(10deg)', offset: 0.9 }),
                             Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 1, transform: 'rotate(0deg)', offset: 1 })
                         ]))
                     ]),
                     Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["j" /* transition */])('void => word-k', [
-                        Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["e" /* animate */])(6250, Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["f" /* keyframes */])([
+                        Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["e" /* animate */])(2000, Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["f" /* keyframes */])([
                             Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 0, transform: 'translateX(350%) translateY(-200%)', offset: 0 }),
-                            Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 1, transform: 'translateX(0) translateY(0)', offset: 0.8 }),
+                            Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 1, transform: 'translateX(0) translateY(0)', offset: 0.5 }),
                             Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 0, transform: 'translateX(3500%) translateY(-2000%)', offset: 1 })
                         ]))
                     ]),
                     Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["j" /* transition */])('void => word-u', [
-                        Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["e" /* animate */])(6250, Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["f" /* keyframes */])([
+                        Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["e" /* animate */])(2000, Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["f" /* keyframes */])([
                             Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 0, transform: 'translateX(400%) translateY(-200%)', offset: 0 }),
-                            Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 1, transform: 'translateX(0) translateY(0)', offset: 0.8 }),
-                            Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 0, transform: 'translateX(0) translateY(0)', offset: 1 })
+                            Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 1, transform: 'translateX(0) translateY(0)', offset: 0.5 }),
+                            Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 0, transform: 'translateX(3500%) translateY(-2000%)', offset: 1 })
                         ]))
                     ]),
                     Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["j" /* transition */])('void => word-o', [
-                        Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["e" /* animate */])(6250, Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["f" /* keyframes */])([
+                        Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["e" /* animate */])(2000, Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["f" /* keyframes */])([
                             Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 0, transform: 'translateX(500%)', offset: 0 }),
-                            Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 1, transform: 'translateX(0)', offset: 0.8 }),
-                            Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 0, transform: 'translateX(0) translateY(0)', offset: 1 })
+                            Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 1, transform: 'translateX(0)', offset: 0.5 }),
+                            Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* style */])({ opacity: 0, transform: 'translateX(3500%) translateY(-2000%)', offset: 1 })
                         ]))
                     ])
                 ])
