@@ -76,21 +76,21 @@ import { trigger, keyframes, state, style, animate, transition } from '@angular/
         animate(2000, keyframes([
           style({ opacity: 0, transform: 'translateX(350%) translateY(-200%)', offset: 0 }),
           style({ opacity: 1, transform: 'translateX(0) translateY(0)', offset: 0.5 }),
-          style({ opacity: 0, transform: 'translateX(3500%) translateY(-2000%)', offset: 1 })
+          style({ opacity: 0, transform: 'translateX(700%) translateY(-700%)', offset: 1 })
         ]))
       ]),
       transition('void => word-u', [
         animate(2000, keyframes([
           style({ opacity: 0, transform: 'translateX(400%) translateY(-200%)', offset: 0 }),
           style({ opacity: 1, transform: 'translateX(0) translateY(0)', offset: 0.5 }),
-          style({ opacity: 0, transform: 'translateX(3500%) translateY(-2000%)', offset: 1 })
+          style({ opacity: 0, transform: 'translateX(700%) translateY(-700%)', offset: 1 })
         ]))
       ]),
       transition('void => word-o', [
         animate(2000, keyframes([
           style({ opacity: 0, transform: 'translateX(500%)', offset: 0 }),
           style({ opacity: 1, transform: 'translateX(0)', offset: 0.5 }),
-          style({ opacity: 0, transform: 'translateX(3500%) translateY(-2000%)', offset: 1 })
+          style({ opacity: 0, transform: 'translateX(700%) translateY(-700%)', offset: 1 })
         ]))
       ])
     ]),
@@ -128,6 +128,20 @@ export class AppComponent {
     //     document.getElementById('top').style.transform = 'translateX(0)';
     //   }, 300);
     // }
+  }
+
+  /**
+   * view the whole list
+   */
+  toList() {
+    alert('Null');
+  }
+
+  /**
+   * view the paper
+   */
+  toPaper(paper) {
+    alert('Not prepared');
   }
 
 }

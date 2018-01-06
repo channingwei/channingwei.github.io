@@ -37,21 +37,78 @@ div.top div {
     justify-content: center;
     -webkit-justify-content: center;
 }
-.top-page {
+.top-page-none {
     margin-top: 150px;
     height: 250px;
     width: 360px;
-    background-color: transparent;
     cursor: pointer;
 }
-div.top-page:hover {
-    background-color: rgb(72, 188, 255, 0.05) !important;
+.top-page-one {
+    margin-top: 150px;
+    height: 250px;
+    width: 360px;
+    cursor: pointer;
+    border: 1px solid #767676;
+    box-shadow: #767676 0px 0px 6px;
+}
+.top-page-one:hover {
+    background-color: rgba(72, 188, 255, 0.05);
+}
+.top-page-two {
+    margin-top: 150px;
+    height: 250px;
+    width: 360px;
+    cursor: pointer;
+    border: 1px solid #767676;
+    box-shadow: #767676 0px 0px 6px;
+}
+.top-page-two:hover {
+    background-color: rgba(72, 188, 255, 0.05);
+}
+div.top-page-two:first-child {
+    transform: matrix3d(1, 0, 0, 0.0006, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+}
+div.top-page-two:first-child:hover {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+}
+div.top-page-two:last-child {
+    transform: matrix3d(1, 0, 0, -0.0006, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+}
+div.top-page-two:last-child:hover {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+}
+div.top-page-two + div.top-page-two {
+    margin-left: 100px !important;
+}
+.top-page-three {
+    margin-top: 150px;
+    height: 250px;
+    width: 360px;
+    cursor: pointer;
+    border: 1px solid #767676;
+    box-shadow: #767676 0px 0px 6px;
+}
+.top-page-three:hover {
+    background-color: rgba(72, 188, 255, 0.05);
+}
+div.top-page-three:first-child {
+    transform: matrix3d(1, 0, 0, 0.0006, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+}
+div.top-page-three:first-child:hover {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+}
+div.top-page-three:last-child {
+    transform: matrix3d(1, 0, 0, -0.0006, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+}
+div.top-page-three:last-child:hover {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
 }
 div.top-page + div.top-page {
     margin-left: 60px;
 }
 .page-icon {
     text-align: center;
+    margin-top: 20px;
 }
 .page-title {
     text-align: center;
@@ -72,12 +129,23 @@ div.top-page + div.top-page {
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
 }
-
+.top-page:hover .page-abstract {
+    color: #a3a3a3;
+}
 .look-more {
     position: fixed;
     bottom: 30px;
     width: 100%;
+    height: 40px;
+    line-height: 40px;
     text-align: center;
     font-size: 14px;
     color: #767676;
+    cursor: pointer;
+    transform: translateX(0);
+}
+.look-more:hover {
+    color: #a3a3a3;
+    transform: rotateY(180deg);
+    transition: transform 1s;
 }

@@ -6,17 +6,23 @@
         {{ word.char }}
       </div>
     </div>
-    <!-- TODO 鼠标移到上面的渐变动画 -->
     <div class="underline"></div>
-    <!-- TODO 获取最新三篇文章展示在首页 -->
     <div class="top-three">
-      <div *ngFor="let paper of topThreePapers" class="top-page">
-        <div class="page-icon"><img src="static/assets/img/test.png" /></div>
-        <div class="page-title">{{ paper.title }}</div>
-        <div class="page-abstract">{{ paper.abstract }}</div>
+      <div *ngIf="topThreePapers.length <= 0; else elseBlock" class="top-page-none">
+        No Paper Now!
       </div>
+      <ng-template #elseBlock>
+        <div *ngFor="let paper of topThreePapers" class="top-page" [class.top-page-one]="topThreePapers.length === 1" [class.top-page-two]="topThreePapers.length === 2"
+          [class.top-page-three]="topThreePapers.length === 3" (click)="toPaper(paper)">
+          <div class="page-icon">
+            <img src="static/assets/img/test.png" />
+          </div>
+          <div class="page-title">{{ paper.title }}</div>
+          <div class="page-abstract">{{ paper.abstract }}</div>
+        </div>
+      </ng-template>
     </div>
   </div>
-  <!-- TODO 鼠标移到上面的渐变动画 -->
-  <div class="look-more">查看更多</div>
+  <!-- 前进箭头gif -->
+  <div class="look-more" (click)="toList()">查看更多<img src="" /></div>
 </div>
