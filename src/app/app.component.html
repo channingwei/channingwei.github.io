@@ -15,6 +15,7 @@
         <div *ngFor="let paper of topThreePapers" class="top-page" [class.top-page-one]="topThreePapers.length === 1" [class.top-page-two]="topThreePapers.length === 2"
           [class.top-page-three]="topThreePapers.length === 3" (click)="toPaper(paper)">
           <div class="page-icon">
+            <!-- TODO change icon image -->
             <img src="static/assets/img/test.png" />
           </div>
           <div class="page-title">{{ paper.title }}</div>
@@ -23,6 +24,9 @@
       </ng-template>
     </div>
   </div>
-  <!-- 前进箭头gif -->
-  <div class="look-more" (click)="toList()">查看更多<img src="" /></div>
+  <div class="look-more" (click)="toList()">
+    <div class="arrow-left"></div>
+    <div>查看更多</div>
+    <div class="arrow-right"></div>
+  </div>
 </div>
