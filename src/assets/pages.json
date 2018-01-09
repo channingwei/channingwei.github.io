@@ -2,8 +2,22 @@
   "pages": [
     {
       "path": "pages/20180105/",
-      "title": "Thanks",
-      "abstract": "Thanks somebody...",
+      "title": "ion-input",
+      "abstract": "ion-input is meant for text type inputs only, such as text, password, email, number, search, tel, and url. Ionic still uses an actual <input type=\"text\"> HTML element within the component, however, with Ionic wrapping the native HTML input element it's better able to handle the user experience and interactivity.",
+      "date": "2018-01-07",
+      "tags": [""]
+    },
+    {
+      "path": "pages/20180105/",
+      "title": "ion-input",
+      "abstract": "An ion-input is not used for non-text type inputs, such as a checkbox, radio, toggle, range, select, etc.",
+      "date": "2018-01-07",
+      "tags": [""]
+    },
+    {
+      "path": "pages/20180105/",
+      "title": "ion-input",
+      "abstract": "Along with the blur/focus events, input support all standard text input events like keyup, keydown, keypress, input,etc. Any standard event can be attached and will function as expected.",
       "date": "2018-01-07",
       "tags": [""]
     }
