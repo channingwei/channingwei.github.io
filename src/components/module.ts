@@ -14,30 +14,30 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // } from './interface/index';
 
 @NgModule({
-    declarations: [
-        // ContainerHostDirective,
+	declarations: [
+		// ContainerHostDirective,
 
-        // DialogComponent,
-        // DialogContainerComponent,
+		// DialogComponent,
+		// DialogContainerComponent,
 
-        // ToastContainerComponent,
-        // ToastComponent,
+		// ToastContainerComponent,
+		// ToastComponent,
 
-        // LoadContainerComponent,
-        // LoadComponent
-    ],
-    imports: [BrowserAnimationsModule, CommonModule],
-    exports: [],
-    providers: [/*PopUpService, Container*/],
-    entryComponents: [
-        // DialogComponent,
-        // DialogContainerComponent,
+		// LoadContainerComponent,
+		// LoadComponent
+	],
+	imports: [BrowserAnimationsModule, CommonModule],
+	exports: [],
+	providers: [/*PopUpService, Container*/],
+	entryComponents: [
+		// DialogComponent,
+		// DialogContainerComponent,
 
-        // ToastContainerComponent,
-        // ToastComponent,
+		// ToastContainerComponent,
+		// ToastComponent,
 
-        // LoadContainerComponent,
-        // LoadComponent
-    ]
+		// LoadContainerComponent,
+		// LoadComponent
+	]
 })
 export class KuoModule { }

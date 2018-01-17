@@ -5,9 +5,9 @@ import 'rxjs/add/operator/toPromise';
 @Injectable()
 export class PageService {
 
-    constructor(private http: Http) { }
+	constructor(private http: Http) { }
 
-    topThreePages() {
-        return this.http.get('static/assets/pages.json').toPromise();
-    }
+	topThreePages() {
+		return this.http.get('static/assets/pages.json').toPromise();
+	}
 }

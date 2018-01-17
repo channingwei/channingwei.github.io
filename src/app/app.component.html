@@ -1,32 +1,32 @@
 <div class="home-page">
-  <div>
-    <div class="top" id="top">
-      <div [@wordFlyIn]="word.trigger" (@wordFlyIn.done)="animationDone($event, iterator)" *ngFor="let word of words;let iterator = index;"
-        [id]="iterator">
-        {{ word.char }}
-      </div>
-    </div>
-    <div class="underline"></div>
-    <div class="top-three">
-      <div *ngIf="topThreePapers.length <= 0; else elseBlock" class="top-page-none">
-        No Paper Now!
-      </div>
-      <ng-template #elseBlock>
-        <div *ngFor="let paper of topThreePapers" class="top-page" [class.top-page-one]="topThreePapers.length === 1" [class.top-page-two]="topThreePapers.length === 2"
-          [class.top-page-three]="topThreePapers.length === 3" (click)="toPaper(paper)">
-          <div class="page-icon">
-            <!-- TODO change icon image -->
-            <img src="static/assets/img/original.png" />
-          </div>
-          <div class="page-title">{{ paper.title }}</div>
-          <div class="page-abstract">{{ paper.abstract }}</div>
-        </div>
-      </ng-template>
-    </div>
-  </div>
-  <div class="look-more" (click)="toList()">
-    <div class="arrow-left"></div>
-    <div>查看更多</div>
-    <div class="arrow-right"></div>
-  </div>
+	<div>
+		<div class="top" id="top">
+			<div [@wordFlyIn]="word.trigger" (@wordFlyIn.done)="animationDone($event, iterator)" *ngFor="let word of words;let iterator = index;"
+			 [id]="iterator">
+				{{ word.char }}
+			</div>
+		</div>
+		<div class="underline"></div>
+		<div class="top-three">
+			<div *ngIf="topThreePapers.length <= 0; else elseBlock" class="top-page-none">
+				No Paper Now!
+			</div>
+			<ng-template #elseBlock>
+				<div *ngFor="let paper of topThreePapers" class="top-page" [class.top-page-one]="topThreePapers.length === 1" [class.top-page-two]="topThreePapers.length === 2"
+				 [class.top-page-three]="topThreePapers.length === 3" (click)="toPaper(paper)">
+					<div class="page-icon">
+						<!-- TODO change icon image -->
+						<img src="static/assets/img/original.png" />
+					</div>
+					<div class="page-title">{{ paper.title }}</div>
+					<div class="page-abstract">{{ paper.abstract }}</div>
+				</div>
+			</ng-template>
+		</div>
+	</div>
+	<div class="look-more" (click)="toList()">
+		<div class="arrow-left"></div>
+		<div>查看更多</div>
+		<div class="arrow-right"></div>
+	</div>
 </div>
