@@ -14,16 +14,16 @@
     font-size: 10rem;
     text-align: center;
     color: #ac9455;
-    font-family: kuoFont;
+    font-family: snell roundhand, French Script MT;
     display: inline-flex;
     display: -webkit-inline-flex;
     justify-content: center;
     -webkit-justify-content: center;
     flex-grow: 1;
-    font-family: kuoFont;
+    font-family: snell roundhand, French Script MT;
 }
 div.top div {
-    font-family: kuoFont;
+    font-family: snell roundhand, French Script MT;
 }
 .underline-flex {
     display: inline-flex;
