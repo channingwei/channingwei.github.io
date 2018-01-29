@@ -141,7 +141,7 @@ export class AppComponent {
 	 * view the paper
 	 */
 	toPaper(paper) {
-		alert('Not prepared');
+		location.href = paper.path;
 	}
 
 }
