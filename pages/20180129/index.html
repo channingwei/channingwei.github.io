@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<title>MacOS下自带Python的版本问题</title>
+	</head>
+<body>
+<h2><em>MacOS</em>下自带<em>Python</em>的版本问题</h2>
+
+<blockquote>
+<p>Mac电脑系统里就自带一些软件：<em>Python</em>、<em>Git</em>、<em>SVN</em>等</p>
+</blockquote>
+
+<p>这里讲下<em>MacOS</em>系统里自带的<em>Python</em>的问题。系统自带的2.x版本，我现在系统是<em>macOS High Sierra 10.13.3</em>，里面自带的<em>Python</em>版本是2.7.10。了解Python的开发者应该都清楚Python有两个大版本：<em>Python2.x</em>和<em>Python3.x</em>；那么问题就来了想在<em>Mac</em>上用<em>Python3.x</em>的版本怎么办。本来安装个<em>Python3.x</em>版本没什么问题的，现在系统里有自带的<em>Python2.x</em>版本。网上有不少的文章都说到把系统的<em>Python</em>升级到3.x版本，而且把系统原来自带的2.x版本删除。</p>
+
+<blockquote>
+<p>附上一些网上找到的文章：</p>
+
+<ul>
+	<li><a href="https://jingyan.baidu.com/article/27fa7326e4809646f8271fc7.html" title="更新mac自带的python2.7到3.4版本">更新mac自带的python2.7到3.4版本</a></li>
+	<li><a href="http://blog.csdn.net/chienchia/article/details/39151759" title="更新mac下自带的python2.7到python3.3">更新mac下自带的python2.7到python3.3</a></li>
+	<li><a href="https://www.jianshu.com/p/a10402b48a1c" title="Python for Mac升级">Python for Mac升级</a> 这篇文章中也提到了删除系统自带Python会带来Xcode无法使用的问题</li>
+</ul>
+</blockquote>
+
+<hr />
+
+<p>这么做是没什么问题，确实<em>Python</em>升级到3.x版本了。不过同时也带来了一些问题，<em>MacOS</em>有一些系统软件都是依赖系统自带的<em>Python2.x</em>，删除后导致一些软件无法正常使用：比如我平时经常用到的<em>Xcode</em>，无法打开了；还有没有其他受影响的软件因没经过测试（发现<em>Xcode</em>不能用后赶紧修复，无暇顾及其他）目前不清楚。</p>
+
+<hr />
+
+<p>接下来讲讲怎么修复删除系统<em>Python2.x</em>带来的问题：删了不该删的东西，那就还原回来嘛！不过得记得重新绑定连接<em>Python2.x</em>，因为在升级3.x版本的时候把连接都绑定到3.x版本上。详情可以参考上面附上的文章中的第三篇，里面写的比较清晰。</p>
+
+<hr />
+
+<p>万一手贱删除后直接清空了回收站怎么办？😇，愿上天保佑，你有做好<em>TimeMachine</em>备份。不然就嘿嘿嘿……</p>
+
+<hr />
+
+<p>那再万一既清空了回收站又没备份怎么办呢？😇 😇，那么靠自己就无能为力了（当然重装系统不再考虑范围内）。我的做法是找一个和你同样用Mac的同事或认识的人，到他电脑上拷贝一份，然后放到你自己电脑上（记得重新绑定连接<em>Python2.x</em>）。我就是这么做的才弄好的。希望可以帮助到哪些管不住自己手的人🧐🤨。</p>
+
+<hr />
+
+<p>这里我提供一份<em>Python2.7.10</em>版本的备份文件，点击<a target="_blank" href="Python2.7.10.zip" title="Python2.7.10">download</a>下载！</p>
+
+</body>
+</html>
+
