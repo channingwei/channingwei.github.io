@@ -22,6 +22,11 @@
     flex-grow: 1;
     font-family: snell roundhand, French Script MT;
 }
+@media screen and (max-height: 647px) {
+    .top {
+        padding-top: 6rem;
+    }
+}
 div.top div {
     font-family: snell roundhand, French Script MT;
 }
@@ -49,12 +54,24 @@ div.top div {
     width: 36rem;
     cursor: pointer;
 }
+@media screen and (max-height: 647px) {
+    .top-page-none {
+        height: 22rem;
+        width: 30rem;
+    }
+}
 .top-page-one {
     height: 25rem;
     width: 36rem;
     cursor: pointer;
     border: 1px solid #767676;
     box-shadow: #767676 0px 0px 6px;
+}
+@media screen and (max-height: 647px) {
+    .top-page-one {
+        height: 22rem;
+        width: 30rem;
+    }
 }
 .top-page-one:hover {
     background-color: rgba(72, 188, 255, 0.05);
@@ -65,6 +82,12 @@ div.top div {
     cursor: pointer;
     border: 1px solid #767676;
     box-shadow: #767676 0px 0px 6px;
+}
+@media screen and (max-height: 647px) {
+    .top-page-two {
+        height: 22rem;
+        width: 30rem;
+    }
 }
 .top-page-two:hover {
     background-color: rgba(72, 188, 255, 0.05);
@@ -90,6 +113,12 @@ div.top-page-two + div.top-page-two {
     cursor: pointer;
     border: 1px solid #767676;
     box-shadow: #767676 0px 0px 6px;
+}
+@media screen and (max-height: 647px) {
+    .top-page-three {
+        height: 22rem;
+        width: 30rem;
+    }
 }
 .top-page-three:hover {
     background-color: rgba(72, 188, 255, 0.05);
