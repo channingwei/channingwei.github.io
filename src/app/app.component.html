@@ -1,8 +1,8 @@
 <div class="home-page">
 	<div class="top" id="top">
 		<div [@wordFlyIn]="word.trigger" (@wordFlyIn.done)="animationDone($event, iterator)" *ngFor="let word of words;let iterator = index;"
-		 [id]="iterator">
-			{{ word.char }}
+		 [id]="iterator" [class]="word.class">
+			<!-- {{ word.char }} -->
 		</div>
 	</div>
 	<div class="underline-flex">

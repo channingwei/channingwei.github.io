@@ -98,7 +98,7 @@ import { trigger, keyframes, state, style, animate, transition } from '@angular/
 	]
 })
 export class AppComponent {
-	words = [{ char: 'C', trigger: 'word-c' }, { char: 'h', trigger: 'word-h' }, { char: 'a', trigger: 'word-a' }, { char: 'n', trigger: 'word-n-0' }, { char: 'n', trigger: 'word-n-1' }, { char: 'i', trigger: 'word-i' }, { char: 'n', trigger: 'word-n-2' }, { char: 'g', trigger: 'word-g' }, { char: 'K', trigger: 'word-k' }, { char: 'u', trigger: 'word-u' }, { char: 'o', trigger: 'word-o' }];
+	words = [{ char: 'C', trigger: 'word-c', class: 'bg-c' }, { char: 'h', trigger: 'word-h', class: 'bg-h' }, { char: 'a', trigger: 'word-a', class: 'bg-a' }, { char: 'n', trigger: 'word-n-0', class: 'bg-n' }, { char: 'n', trigger: 'word-n-1', class: 'bg-n' }, { char: 'i', trigger: 'word-i', class: 'bg-i' }, { char: 'n', trigger: 'word-n-2', class: 'bg-n' }, { char: 'g', trigger: 'word-g', class: 'bg-g' }, { char: 'K', trigger: 'word-k', class: 'bg-k' }, { char: 'u', trigger: 'word-u', class: 'bg-u' }, { char: 'o', trigger: 'word-o', class: 'bg-o' }];
 	topThreePapers = [];
 
 	constructor(private pageService: PageService) {

@@ -19,6 +19,8 @@
     display: -webkit-inline-flex;
     justify-content: center;
     -webkit-justify-content: center;
+    align-items: baseline;
+    -webkit-align-items: baseline;
     flex-grow: 1;
     font-family: snell roundhand, French Script MT;
 }
