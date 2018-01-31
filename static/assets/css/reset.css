@@ -59,3 +59,40 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+.bg-a {
+    width: 64px; height: 55px;
+    background: url('css_sprites.png') -275px -85px;
+}
+.bg-c {
+    width: 76px; height: 80px;
+    background: url('css_sprites.png') -10px -10px;
+}
+.bg-g {
+    width: 47px; height: 64px;
+    background: url('css_sprites.png') -106px -111px;
+}
+.bg-h {
+    width: 59px; height: 81px;
+    background: url('css_sprites.png') -106px -10px;
+}
+.bg-i {
+    width: 35px; height: 73px;
+    background: url('css_sprites.png') -10px -213px;
+}
+.bg-k {
+    width: 61px; height: 83px;
+    background: url('css_sprites.png') -10px -110px;
+}
+.bg-n {
+    width: 70px; height: 61px;
+    background: url('css_sprites.png') -185px -10px;
+}
+.bg-o {
+    width: 67px; height: 55px;
+    background: url('css_sprites.png') -275px -10px;
+}
+.bg-u {
+    width: 67px; height: 56px;
+    background: url('css_sprites.png') -185px -91px;
+}
