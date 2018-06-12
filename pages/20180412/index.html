@@ -271,26 +271,6 @@ export class HomePageModule { }
 <p>调整部分代码即可解决问题</p>
 </blockquote>
 
-<p>scroll.directive.ts文件中的生命周期钩子调整部分代码</p>
-
-<pre><code>/**
-   * 组件初始化的生命周期钩子——初始化
-   * @memberof LazyloadComponent
-   */
-  ngAfterViewInit() {
-    this.target = this.el.nativeElement;
-    if (this.target.localName === &#39;ion-content&#39;) {
-      this.target = this.target.children[2];
-    }
-    this.renderer.listen(this.target, &#39;scroll&#39;, this.scrollCallback);
-    this.timer = setInterval(() =&gt; {
-      this.lazyEl = this.target.querySelectorAll(&#39;img-lazy-load&#39;);
-      this.onScroll(&#39;&#39;);
-    }, 500);
-// 把订阅部分代码放到页面滚动事件onScroll的最后部分
-  }
-</code></pre>
-
 <p>scroll.directive.ts文件中的页面滚动事件调整部分代码</p>
 
 <pre><code> /**
@@ -310,7 +290,7 @@ export class HomePageModule { }
       let distance = this.target[&#39;scrollTop&#39;] || this.target[&#39;screenY&#39;] || 0;
       let viewHeight = this.target[&#39;clientHeight&#39;] || this.target[&#39;innerHeight&#39;] || 0;
       let fold = distance + viewHeight;
-      if (fold &gt;= el.offsetTop + this.offsetHeight) {
+      if (fold &gt;= that.getOffsetTopByBody(el) + this.offsetHeight) {
         let img = new Image();
         img.src = imgsrc;
         // 通过Image onload加载图片，加载完成后放到真正的img标签上
@@ -323,33 +303,26 @@ export class HomePageModule { }
             // 绑定scr
             this.renderer.setProperty(el.children[0], &#39;src&#39;, imgsrc);
           }
-        } else {
-          img.onload = () =&gt; {
-            if (el.children.length === 2) {
-              // 去除spinner
-              this.renderer.removeChild(el, el.children[1]);
-            }
-            if (el.children[0].src === &#39;&#39; || el.children[0].src === undefined) {
-              // 绑定scr
-              this.renderer.setProperty(el.children[0], &#39;src&#39;, imgsrc);
-            }
-          }
-        }
+        } 
       }
     }
-    this.events.subscribe(&#39;pull-down&#39;, isUpToBottom =&gt; {
-      if (isUpToBottom) {
-        clearInterval(this.timer);
-      }
-    });
   }
 </code></pre>
 
-<p>添加兼容FF、IE浏览器部分，添加订阅移除定时器。相应的如果是没有分页的页面在获取所有数据后也需要通过订阅来取消定时器</p>
+<p>添加方法计算offsetTop值：</p>
 
-<blockquote>
-<p>this.events.publish(&#39;pull-down&#39;, true)</p>
-</blockquote>
+<pre><code>/**
+   * 计算dom元素到body的offsetTop值
+   * @memberof AppComponent
+   */
+  getOffsetTopByBody(el) {
+    let offsetTop = 0;
+    while (el &amp;&amp; el.tagName !== &#39;BODY&#39;) {
+      offsetTop += el.offsetTop;
+      el = el.offsetParent;
+    }
+    return offsetTop;
+  }</code></pre>
 
 </body>
 </html>
